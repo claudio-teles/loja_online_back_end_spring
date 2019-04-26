@@ -32,6 +32,8 @@ public class Estoque implements Serializable {
 	private List<Produto> listaDeProdutosDoEstoque;
 	
 	private List<ItensTambemVisto> itensVistos;
+	
+	private List<Liquidacao> liquidacao;
 
 	/**
 	 * 
@@ -70,6 +72,14 @@ public class Estoque implements Serializable {
 
 	public void setItensVistos(List<ItensTambemVisto> itensVistos) {
 		this.itensVistos = itensVistos;
+	}
+
+	public List<Liquidacao> getLiquidacao() {
+		return liquidacao;
+	}
+
+	public void setLiquidacao(List<Liquidacao> liquidacao) {
+		this.liquidacao = liquidacao;
 	}
 
 	@Override
