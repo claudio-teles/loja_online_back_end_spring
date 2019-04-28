@@ -11,6 +11,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToOne;
 
 /**
  * @author CLAUDIO
@@ -29,8 +30,9 @@ public class Loja implements Serializable {
 	private Long idLoja;
 	
 	@Column(name = "nome_da_loja")
-	private static final String NOME_DA_LOJA = "Loja online de produtos eletrônicos";
+	private String nomeDaLoja = "";
 	
+	@OneToOne(targetEntity = Estoque.class)
 	private Estoque estoque;
 
 	/**

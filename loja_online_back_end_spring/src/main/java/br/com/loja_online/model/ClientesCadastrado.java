@@ -1,7 +1,6 @@
 package br.com.loja_online.model;
 
 import java.io.Serializable;
-import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,7 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 /**
@@ -25,7 +24,7 @@ public class ClientesCadastrado implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 464980385951689573L;
-	
+
 	@Id @GeneratedValue(strategy = GenerationType.SEQUENCE) @Column(name = "id_cliente")
 	private Long idCliente;
 	@Column(name = "primeiro_nome", nullable = false)
@@ -72,8 +71,8 @@ public class ClientesCadastrado implements Serializable {
 	@Column(name = "ano_validade_cartao", nullable = false)
 	private String anoValidadeCartao;
 	
-	@OneToMany(targetEntity = CarrinhoDeCompra.class)
-	private List<CarrinhoDeCompra> listaDeCarrinhosDeCompras;
+	@OneToOne(targetEntity = CarrinhoDeCompra.class)
+	private CarrinhoDeCompra carrinhoDeCompra;
 	
 	public ClientesCadastrado() {
 		super();
@@ -273,12 +272,12 @@ public class ClientesCadastrado implements Serializable {
 		this.anoValidadeCartao = anoValidadeCartao;
 	}
 
-	public List<CarrinhoDeCompra> getListaDeCarrinhosDeCompras() {
-		return listaDeCarrinhosDeCompras;
+	public CarrinhoDeCompra getCarrinhoDeCompra() {
+		return carrinhoDeCompra;
 	}
 
-	public void setListaDeCarrinhosDeCompras(List<CarrinhoDeCompra> listaDeCarrinhosDeCompras) {
-		this.listaDeCarrinhosDeCompras = listaDeCarrinhosDeCompras;
+	public void setCarrinhoDeCompra(CarrinhoDeCompra carrinhoDeCompra) {
+		this.carrinhoDeCompra = carrinhoDeCompra;
 	}
 
 	@Override
@@ -289,7 +288,7 @@ public class ClientesCadastrado implements Serializable {
 				+ ", bairro=" + bairro + ", cidade=" + cidade + ", estado=" + estado + ", pais=" + pais + ", tipoConta="
 				+ tipoConta + ", variacao=" + variacao + ", bandeira=" + bandeira + ", nomeConta=" + nomeConta
 				+ ", numeroConta=" + numeroConta + ", mesValidadeCartao=" + mesValidadeCartao + ", anoValidadeCartao="
-				+ anoValidadeCartao + ", listaDeCarrinhosDeCompras=" + listaDeCarrinhosDeCompras + "]";
+				+ anoValidadeCartao + ", carrinhoDeCompra=" + carrinhoDeCompra + "]";
 	}
 	
 }

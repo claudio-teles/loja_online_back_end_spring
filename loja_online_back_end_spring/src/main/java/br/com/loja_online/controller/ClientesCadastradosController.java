@@ -24,6 +24,8 @@ import br.com.loja_online.repository.ClienteLogadoRepository;
 @RequestMapping("api/clientes_cadastrados")
 public class ClientesCadastradosController {
 	
+	public static Long ultimo_id = null;
+
 	@Autowired
 	private ClienteCadastradoRepository repositorioClientesCadastrado;
 	
@@ -65,12 +67,13 @@ public class ClientesCadastradosController {
 		clienteCadastrado.setAnoValidadeCartao( cadastroJson.get( "ano" ) );
 		
 		ClientesLogado clienteLogado = new ClientesLogado();
-		clienteLogado.setFkClienteCadastrado(clienteCadastrado);
 		clienteLogado.setStatusClienteLogado(false);
 		
 		clienteLogadoRepository.save(clienteLogado);
 		
-		return repositorioClientesCadastrado.save(clienteCadastrado);
+		repositorioClientesCadastrado.save(clienteCadastrado);
+		
+		return clienteCadastrado;
 	}
 
 }

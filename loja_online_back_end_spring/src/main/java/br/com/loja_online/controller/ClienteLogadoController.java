@@ -8,13 +8,13 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.loja_online.model.ClientesCadastrado;
 import br.com.loja_online.model.ClientesLogado;
 import br.com.loja_online.repository.ClienteCadastradoRepository;
 import br.com.loja_online.repository.ClienteLogadoRepository;
@@ -40,21 +40,24 @@ public class ClienteLogadoController {
 	 */
 	public ClienteLogadoController() {}
 	
-	@PutMapping
+	@PutMapping @Transactional
 	@ResponseStatus(HttpStatus.OK)
 	public String fazerLogin(@RequestBody Map<String, String> loginJson) {
 		
 		if (statusClienteLogado == false) {
 			
-			List<ClientesCadastrado> clientesCadastrados = cadastradoRepository.findAll();
-			Object nome = loginJson.get("nome_de_usuario");
-			Object senha = loginJson.get("senha_de_usuario");
-			boolean nomeDeUsuario = clientesCadastrados.contains(nome);
-			boolean senhaDeUsuario = clientesCadastrados.contains(senha);
+			List<String> listaDeUsuariosCadastrados = cadastradoRepository.findAllANomeDeUsuario( loginJson.get("nome_de_usuario") );
+			List<String> listaDeSenhasDeUsuariosCadastrados = cadastradoRepository.findAllASenha( loginJson.get("senha_de_usuario") );
+			
+			boolean nomeDeUsuario = listaDeUsuariosCadastrados.contains( loginJson.get("nome_de_usuario") );
+			boolean senhaDeUsuario = listaDeSenhasDeUsuariosCadastrados.contains( loginJson.get("senha_de_usuario") );
+			
+			System.out.println("Nome de usuario:" + nomeDeUsuario+".");
+			System.out.println("Senha de usuario:" + senhaDeUsuario+".");
 			
 			if (nomeDeUsuario && senhaDeUsuario) {
 				statusClienteLogado = true;
-				ClientesLogado clienteLogado = clienteLogadoRepository.getOne( Long.parseLong( loginJson.get("id_do_usuario") ) );
+				ClientesLogado clienteLogado = clienteLogadoRepository.getOne( Long.parseLong( loginJson.get("id_usuario_logado")) );
 				clienteLogado.setStatusClienteLogado(true);
 				clienteLogadoRepository.save(clienteLogado);
 				

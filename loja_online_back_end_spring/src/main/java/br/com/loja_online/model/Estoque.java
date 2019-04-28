@@ -12,6 +12,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 /**
  * @author CLAUDIO
@@ -29,11 +31,14 @@ public class Estoque implements Serializable {
 	@Id @GeneratedValue(strategy = GenerationType.SEQUENCE) @Column(name = "id_estoque")
 	private Long idEstoque;
 	
+	@OneToMany(targetEntity = Produto.class)
 	private List<Produto> listaDeProdutosDoEstoque;
 	
-	private List<ItensTambemVisto> itensVistos;
+	@OneToOne(targetEntity = ItensTambemVisto.class)
+	private ItensTambemVisto itensVistos;
 	
-	private List<Liquidacao> liquidacao;
+	@OneToOne(targetEntity = Liquidacao.class)
+	private Liquidacao liquidacao;
 
 	/**
 	 * 
@@ -43,11 +48,13 @@ public class Estoque implements Serializable {
 	/**
 	 * @param listaDeProdutosDoEstoque
 	 * @param itensVistos
+	 * @param liquidacao
 	 */
-	public Estoque(List<Produto> listaDeProdutosDoEstoque, List<ItensTambemVisto> itensVistos) {
+	public Estoque(List<Produto> listaDeProdutosDoEstoque, ItensTambemVisto itensVistos, Liquidacao liquidacao) {
 		super();
 		this.listaDeProdutosDoEstoque = listaDeProdutosDoEstoque;
 		this.itensVistos = itensVistos;
+		this.liquidacao = liquidacao;
 	}
 
 	public Long getIdEstoque() {
@@ -66,26 +73,26 @@ public class Estoque implements Serializable {
 		this.listaDeProdutosDoEstoque = listaDeProdutosDoEstoque;
 	}
 
-	public List<ItensTambemVisto> getItensVistos() {
+	public ItensTambemVisto getItensVistos() {
 		return itensVistos;
 	}
 
-	public void setItensVistos(List<ItensTambemVisto> itensVistos) {
+	public void setItensVistos(ItensTambemVisto itensVistos) {
 		this.itensVistos = itensVistos;
 	}
 
-	public List<Liquidacao> getLiquidacao() {
+	public Liquidacao getLiquidacao() {
 		return liquidacao;
 	}
 
-	public void setLiquidacao(List<Liquidacao> liquidacao) {
+	public void setLiquidacao(Liquidacao liquidacao) {
 		this.liquidacao = liquidacao;
 	}
 
 	@Override
 	public String toString() {
 		return "Estoque [idEstoque=" + idEstoque + ", listaDeProdutosDoEstoque=" + listaDeProdutosDoEstoque
-				+ ", itensVistos=" + itensVistos + "]";
+				+ ", itensVistos=" + itensVistos + ", liquidacao=" + liquidacao + "]";
 	}
 
 }

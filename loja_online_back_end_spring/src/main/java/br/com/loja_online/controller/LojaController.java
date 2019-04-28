@@ -8,6 +8,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -47,10 +48,10 @@ public class LojaController {
 		this.nomeDoCliente = nomeDoCliente;
 	}
 
-	@GetMapping
+	@GetMapping("/id")
 	@ResponseStatus(HttpStatus.OK)
-	public Optional<Loja> exibirEstoqueDaLoja() {
-		return lojaRepository.findById( (long)1 );
+	public Optional<Loja> exibirEstoqueDaLoja(@PathVariable Long id) {
+		return lojaRepository.findById( id );
 	}
 	
 	@PutMapping

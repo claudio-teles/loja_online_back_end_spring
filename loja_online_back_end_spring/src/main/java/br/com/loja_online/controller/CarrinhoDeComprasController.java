@@ -97,15 +97,15 @@ public class CarrinhoDeComprasController {
 			for (Produto produto : repositorioDeProdutos) {
 
 				if (produto.getIdProduto() == Integer.parseInt( produtoJson.get("id_produto") )) {
-					listaDeProdutos = carrinhoDeCompra.getListaDeProdutosDoCarrinho();
 					produto.setQuantidadeProduto(1);
-					listaDeProdutos.add(produto);
+					carrinhoDeCompra.getListaDeProdutosDoCarrinho().add(produto);
 
 					if (produto.getQuantidadeProduto() > 0) {
 						Produto p = repositorioDeProdutosDoEstoque.getOne( Long.parseLong( produtoJson.get("id_produto") ) );
 						p.setQuantidadeProduto(p.getQuantidadeProduto() - 1);
-						repositorioDeProdutosDoEstoque.saveAndFlush(p);
+						repositorioDeProdutosDoEstoque.save(p);
 						repositorioCarrinhosDeCompras.save(carrinhoDeCompra);
+						return carrinhoDeCompra.getListaDeProdutosDoCarrinho();
 					}
 				}
 
@@ -132,8 +132,9 @@ public class CarrinhoDeComprasController {
 					if (produto.getQuantidadeProduto() > 0) {
 						Produto p = repositorioDeProdutosDoEstoque.getOne( Long.parseLong( produtoJson.get("id_produto") ) );
 						p.setQuantidadeProduto(p.getQuantidadeProduto() + 1);
-						repositorioDeProdutosDoEstoque.saveAndFlush(p);
+						repositorioDeProdutosDoEstoque.save(p);
 						repositorioCarrinhosDeCompras.save(carrinhoDeCompra);
+						return listaDeProdutos;
 					}
 				}
 

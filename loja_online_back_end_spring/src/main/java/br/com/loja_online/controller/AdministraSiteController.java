@@ -6,6 +6,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,7 +34,6 @@ public class AdministraSiteController {
 	private VendasRealizadaRepository repositorioDeVendas;
 	private boolean administradorLogado = false;
 
-	private Long idDoAdministrador;
 
 	/**
 	 * 
@@ -57,7 +57,6 @@ public class AdministraSiteController {
 			List<AdministadorSite> listaDeTodosOsAdministradores = repositorioDeAdministradores.findAll();
 			Object nome = adiminstradorJson.get( "nome" );
 			Object senha = adiminstradorJson.get( "senha" );
-			idDoAdministrador = Long.parseLong( adiminstradorJson.get("id_do_administrador") );
 			boolean nomeDoAdministrador = listaDeTodosOsAdministradores.contains( nome );
 			boolean senhaDoAdministrador = listaDeTodosOsAdministradores.contains( senha );
 			
@@ -78,16 +77,16 @@ public class AdministraSiteController {
 		return "Usuário ou senha incorreta, tente novamente!";
 	}
 	
-	@PutMapping
+	@PutMapping("/{id_do_administrador}")
 	@ResponseStatus(HttpStatus.OK)
-	public String fazerLoffAdministrador() {
+	public String fazerLoffAdministrador(@PathVariable Long id_do_administrador) {
 		
 		if (administradorLogado == true) {
 			
 			administradorLogado = false;
 			
 			AdministadorSite administador = new AdministadorSite();
-			administador = repositorioDeAdministradores.getOne( idDoAdministrador );
+			administador = repositorioDeAdministradores.getOne( id_do_administrador );
 			administador.setStatuAdministradorLogado(false);
 			
 			repositorioDeAdministradores.save(administador);

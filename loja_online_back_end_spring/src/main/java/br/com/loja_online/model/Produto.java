@@ -160,8 +160,8 @@ public class Produto implements Serializable {
 		return avaliacao;
 	}
 
-	public void setAvaliacao(String avaliacao) {
-		this.avaliacao = avaliacao;
+	public String setAvaliacao(String avaliacao) {
+		return this.avaliacao = avaliacao;
 	}
 
 	public Integer getCurtiu() {
