@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +19,6 @@ import br.com.loja_online.model.Produto;
 import br.com.loja_online.repository.CarrinhoDeComprasRepository;
 import br.com.loja_online.repository.ProdutoRepository;
 
-
 /**
  * @author CLAUDIO
  *
@@ -28,117 +26,125 @@ import br.com.loja_online.repository.ProdutoRepository;
 @RestController
 @RequestMapping("/api/carrinho_de_compras")
 public class CarrinhoDeComprasController {
-	
+
 	@Autowired
 	private CarrinhoDeComprasRepository repositorioCarrinhosDeCompras;
-	
+
 	@Autowired
 	private ProdutoRepository repositorioDeProdutosDoEstoque;
-	
-	private CarrinhoDeCompra carrinhoDeCompra = new CarrinhoDeCompra();
-	
-	private List<Produto> listaDeProdutos = new ArrayList<>();
-	
-	private boolean clienteLogado = false;
 
-	public CarrinhoDeComprasController() {}
-	
-	
+	private CarrinhoDeCompra carrinhoDeCompra = new CarrinhoDeCompra();
+	private CarrinhoDeCompra carrinho = new CarrinhoDeCompra();
+
+	private List<Produto> listaDeProdutos = new ArrayList<>();
+
+	private boolean clienteLogado = true;
+
+	public CarrinhoDeComprasController() {
+	}
+
 	public boolean isClienteLogado() {
 		return clienteLogado;
 	}
-
 
 	public void setClienteLogado(boolean clienteLogado) {
 		this.clienteLogado = clienteLogado;
 	}
 
-
 	public CarrinhoDeCompra getCarrinhoDeCompra() {
 		return carrinhoDeCompra;
 	}
-
 
 	public void setCarrinhoDeCompra(CarrinhoDeCompra carrinhoDeCompra) {
 		this.carrinhoDeCompra = carrinhoDeCompra;
 	}
 
-
 	public List<Produto> getListaDeProdutos() {
 		return listaDeProdutos;
 	}
-
 
 	public void setListaDeProdutos(List<Produto> listaDeProdutos) {
 		this.listaDeProdutos = listaDeProdutos;
 	}
 
+	public CarrinhoDeCompra getCarrinho() {
+		return carrinho;
+	}
+
+	public void setCarrinho(CarrinhoDeCompra carrinho) {
+		this.carrinho = carrinho;
+	}
 
 	@GetMapping("/{id_carrinho_de_compras}")
 	@ResponseStatus(HttpStatus.OK)
 	public List<Produto> listarTodosOsProdutosDoCarrinho(@PathVariable Long id_carrinho_de_compras) {
-		if (isClienteLogado() == true) {
-			return repositorioCarrinhosDeCompras.findByIdCarrinho(id_carrinho_de_compras);
+		if (clienteLogado) {
+			 CarrinhoDeCompra carrinhoDoClienteLogado = repositorioCarrinhosDeCompras
+					 .findById(id_carrinho_de_compras).get();
+			return carrinhoDoClienteLogado.getListaDeProdutosDoCarrinho();
 		}
 		return null;
 	}
-	
 
-
-	@PostMapping
+	@PutMapping("/{id_carrinho}/{id_produto}")
 	@ResponseStatus(HttpStatus.CREATED)
-	public List<Produto> adicionarProdutoAoCarrinhoDeCompras(@RequestBody Map<String, String> produtoJson) {
-		
-		if (isClienteLogado() == true) {
+	public List<Produto> adicionarProdutoAoCarrinhoDeCompras(
+				@PathVariable Long id_carrinho, 
+				@PathVariable Long id_produto
+			) {
+		if (clienteLogado) {
 			
-			List<Produto> repositorioDeProdutos = new ArrayList<>();
-			repositorioDeProdutos = repositorioDeProdutosDoEstoque.findAll();
+			Produto produtoAdicionado = repositorioDeProdutosDoEstoque.getOne(id_produto);
 			
-			for (Produto produto : repositorioDeProdutos) {
+			int quantidadeInicial = 1;
 
-				if (produto.getIdProduto() == Integer.parseInt( produtoJson.get("id_produto") )) {
-					produto.setQuantidadeProduto(1);
-					carrinhoDeCompra.getListaDeProdutosDoCarrinho().add(produto);
+			carrinhoDeCompra = repositorioCarrinhosDeCompras.getOne(id_carrinho);
+			Produto produto = repositorioDeProdutosDoEstoque.getOne(id_produto);
+			
+			if ( !carrinhoDeCompra.getListaDeProdutosDoCarrinho().contains(produtoAdicionado) ) {
+				produto.setQuantidadeProduto(String.valueOf(quantidadeInicial));
+				carrinhoDeCompra.getListaDeProdutosDoCarrinho().add(produto);
+				carrinho.getListaDeProdutosDoCarrinho().add(produto);
+				repositorioCarrinhosDeCompras.save(carrinhoDeCompra);
+				Produto p = repositorioDeProdutosDoEstoque.getOne(id_produto);
+				String quantidade = p.getQuantidadeProduto();
+				int novaQuantidade = Integer.parseInt(quantidade);
+				p.setQuantidadeProduto(String.valueOf(novaQuantidade - 1));
+				repositorioDeProdutosDoEstoque.save(p);
+				return carrinhoDeCompra.getListaDeProdutosDoCarrinho();
+			} else {
+				produto.setQuantidadeProduto(String.valueOf(quantidadeInicial + 1));
+				carrinhoDeCompra.getListaDeProdutosDoCarrinho().add(produto);
+				carrinho.getListaDeProdutosDoCarrinho().add(produto);
+				repositorioCarrinhosDeCompras.save(carrinhoDeCompra);
+				Produto p = repositorioDeProdutosDoEstoque.getOne(id_produto);
+				String quantidade = p.getQuantidadeProduto();
+				int novaQuantidade = Integer.parseInt(quantidade);
+				p.setQuantidadeProduto(String.valueOf(novaQuantidade - 1));
+				repositorioDeProdutosDoEstoque.save(p);
+				return carrinhoDeCompra.getListaDeProdutosDoCarrinho();
+			}
 
-					if (produto.getQuantidadeProduto() > 0) {
-						Produto p = repositorioDeProdutosDoEstoque.getOne( Long.parseLong( produtoJson.get("id_produto") ) );
-						p.setQuantidadeProduto(p.getQuantidadeProduto() - 1);
-						repositorioDeProdutosDoEstoque.save(p);
-						repositorioCarrinhosDeCompras.save(carrinhoDeCompra);
-						return carrinhoDeCompra.getListaDeProdutosDoCarrinho();
-					}
-				}
 
-			} 
 		}
 		return null;
 	}
-	
+
 	@PutMapping
-	@ResponseStatus(HttpStatus.NO_CONTENT)
-	public List<Produto> removerProdutosDoCarrinhoDeCompra(@PathVariable Map<String, String> produtoJson) {
-		
-		if (isClienteLogado() == true) {
-			
-			List<Produto> repositorioDeProdutos = new ArrayList<>();
-			repositorioDeProdutos = repositorioDeProdutosDoEstoque.findAll();
-			
-			for (Produto produto : repositorioDeProdutos) {
-
-				if (produto.getIdProduto() == Integer.parseInt( produtoJson.get("id_produto") )) {
-					listaDeProdutos = carrinhoDeCompra.getListaDeProdutosDoCarrinho();
-					listaDeProdutos.remove(produto);
-
-					if (produto.getQuantidadeProduto() > 0) {
-						Produto p = repositorioDeProdutosDoEstoque.getOne( Long.parseLong( produtoJson.get("id_produto") ) );
-						p.setQuantidadeProduto(p.getQuantidadeProduto() + 1);
-						repositorioDeProdutosDoEstoque.save(p);
-						repositorioCarrinhosDeCompras.save(carrinhoDeCompra);
-						return listaDeProdutos;
-					}
-				}
-
-			} 
+	@ResponseStatus(HttpStatus.OK)
+	public List<Produto> removerProdutosDoCarrinhoDeCompra(@RequestBody Map<String, String> produtoJson) {
+		if (clienteLogado) {
+			carrinhoDeCompra = repositorioCarrinhosDeCompras.getOne( Long.parseLong(produtoJson.get("id_carrinho") ));
+			Produto produto = repositorioDeProdutosDoEstoque.getOne( Long.parseLong(produtoJson.get("id_produto") ));
+			carrinhoDeCompra.getListaDeProdutosDoCarrinho().remove(produto);
+			carrinho.getListaDeProdutosDoCarrinho().remove(produto);
+			repositorioCarrinhosDeCompras.save(carrinhoDeCompra);
+			Produto p = repositorioDeProdutosDoEstoque.getOne( Long.parseLong(produtoJson.get("id_produto") ));
+			String quantidade = p.getQuantidadeProduto();
+			int novaQuantidade = Integer.parseInt(quantidade);
+			p.setQuantidadeProduto( String.valueOf(novaQuantidade + 1) );
+			repositorioDeProdutosDoEstoque.save(p);
+			return carrinhoDeCompra.getListaDeProdutosDoCarrinho();
 		}
 		return null;
 	}

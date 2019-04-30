@@ -69,12 +69,14 @@ public class ProdutoController {
 		Produto produto = reposiorioDeProdutos.findById(id_produto ).get();
 		
 		if ( curtir == "Sim" ) {
-			int valorDeCurtidas = produto.getCurtiu();
-			produto.setCurtiu( valorDeCurtidas + 1 );
+			String valorDeCurtidas = produto.getCurtiu();
+			int novoValorDeCurtidas = Integer.parseInt(valorDeCurtidas) + 1;
+			produto.setCurtiu( String.valueOf(novoValorDeCurtidas) );
 			return reposiorioDeProdutos.save(produto);
 		} else {
-			int valorDeNaoCurtidas = produto.getNaoCurtiu();
-			produto.setNaoCurtiu( valorDeNaoCurtidas + 1 );
+			String valorDeNaoCurtidas = produto.getNaoCurtiu();
+			int novoValorDeNaoCurtidas = Integer.parseInt(valorDeNaoCurtidas) - 1;
+			produto.setNaoCurtiu( String.valueOf(novoValorDeNaoCurtidas) );
 			return reposiorioDeProdutos.save(produto);
 		}
 		

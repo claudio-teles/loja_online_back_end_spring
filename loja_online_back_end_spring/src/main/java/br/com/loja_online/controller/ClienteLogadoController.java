@@ -15,7 +15,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.loja_online.model.CarrinhoDeCompra;
+import br.com.loja_online.model.ClientesCadastrado;
 import br.com.loja_online.model.ClientesLogado;
+import br.com.loja_online.repository.CarrinhoDeComprasRepository;
 import br.com.loja_online.repository.ClienteCadastradoRepository;
 import br.com.loja_online.repository.ClienteLogadoRepository;
 
@@ -34,12 +37,35 @@ public class ClienteLogadoController {
 	
 	@Autowired
 	private ClienteLogadoRepository clienteLogadoRepository;
+	
+	@Autowired
+	private CarrinhoDeComprasRepository carrinhoDeComprasRepository;
+	
+	private CarrinhoDeCompra carrinho;
+	
+	private ClientesLogado cliente;
 
 	/**
 	 * 
 	 */
 	public ClienteLogadoController() {}
 	
+	public CarrinhoDeCompra getCarrinho() {
+		return carrinho;
+	}
+
+	public void setCarrinho(CarrinhoDeCompra carrinho) {
+		this.carrinho = carrinho;
+	}
+
+	public ClientesLogado getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(ClientesLogado cliente) {
+		this.cliente = cliente;
+	}
+
 	@PutMapping @Transactional
 	@ResponseStatus(HttpStatus.OK)
 	public String fazerLogin(@RequestBody Map<String, String> loginJson) {
@@ -52,14 +78,24 @@ public class ClienteLogadoController {
 			boolean nomeDeUsuario = listaDeUsuariosCadastrados.contains( loginJson.get("nome_de_usuario") );
 			boolean senhaDeUsuario = listaDeSenhasDeUsuariosCadastrados.contains( loginJson.get("senha_de_usuario") );
 			
-			System.out.println("Nome de usuario:" + nomeDeUsuario+".");
-			System.out.println("Senha de usuario:" + senhaDeUsuario+".");
 			
 			if (nomeDeUsuario && senhaDeUsuario) {
 				statusClienteLogado = true;
-				ClientesLogado clienteLogado = clienteLogadoRepository.getOne( Long.parseLong( loginJson.get("id_usuario_logado")) );
+				System.out.println("nomeDeUsuario: "+nomeDeUsuario+".");
+				System.out.println("senhaDeUsuario: "+senhaDeUsuario+".");
+				ClientesLogado clienteLogado = clienteLogadoRepository.getOne( Long.parseLong( loginJson.get("id_cliente_logado")) );
 				clienteLogado.setStatusClienteLogado(true);
 				clienteLogadoRepository.save(clienteLogado);
+				
+				CarrinhoDeComprasController comprasController = new CarrinhoDeComprasController();
+				comprasController.setClienteLogado(true);
+				
+				carrinho = new CarrinhoDeCompra();
+				ClientesCadastrado cc = cadastradoRepository.getOne(
+					Long.parseLong( loginJson.get("id_cliente_logado"))+ (long)1
+				);
+				carrinho.setClientesCadastrado(cc);
+				carrinhoDeComprasRepository.save(carrinho);
 				
 				return (loginJson.get("nome_de_usuario")+", seja bem vindo a loja online de eletrônicos!");
 			}

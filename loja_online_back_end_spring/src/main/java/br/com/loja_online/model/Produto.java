@@ -10,11 +10,13 @@ import javax.persistence.Id;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 /**
  * @author CLAUDIO
  *
  */
-@Entity
+@Entity @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @NamedQuery(name="produto.findAll", query="SELECT p FROM Produto p")
 public class Produto implements Serializable {
 	
@@ -38,7 +40,7 @@ public class Produto implements Serializable {
 	private float valorProduto;
 	
 	@Column(name = "quantidade_produto", nullable = false)
-	private int quantidadeProduto;
+	private String quantidadeProduto;
 	
 	@Column(nullable = false)
 	private String marca;
@@ -52,10 +54,10 @@ public class Produto implements Serializable {
 	
 	private String avaliacao;
 
-	private Integer curtiu;
+	private String curtiu;
 
 	@Column(name="nao_curtiu")
-	private Integer naoCurtiu;
+	private String naoCurtiu;
 	
 	@OneToOne(targetEntity = ImagemDoProduto.class)
 	private ImagemDoProduto imagemDoProduto;
@@ -65,20 +67,43 @@ public class Produto implements Serializable {
 	 */
 	public Produto() {}
 
-	public Produto(Long codigoBarra, String nomeProduto, float valorProduto, int quantidadeProduto,
-			String marca, String descricao, float garantia) {
+	/**
+	 * @param codigoBarra
+	 * @param nomeProduto
+	 * @param valorProduto
+	 * @param quantidadeProduto
+	 * @param marca
+	 * @param garantia
+	 * @param imagemDoProduto
+	 */
+	public Produto(Long codigoBarra, String nomeProduto, float valorProduto, String quantidadeProduto, String marca,
+			float garantia, ImagemDoProduto imagemDoProduto) {
 		super();
 		this.codigoBarra = codigoBarra;
 		this.nomeProduto = nomeProduto;
 		this.valorProduto = valorProduto;
 		this.quantidadeProduto = quantidadeProduto;
 		this.marca = marca;
-		this.descricao = descricao;
 		this.garantia = garantia;
+		this.imagemDoProduto = imagemDoProduto;
 	}
 
-	public Produto(Long codigoBarra, String nomeProduto, float valorProduto, int quantidadeProduto,
-			String marca, String descricao, float garantia, String avaliacao, Integer curtiu, Integer naoCurtiu) {
+	/**
+	 * @param codigoBarra
+	 * @param nomeProduto
+	 * @param valorProduto
+	 * @param quantidadeProduto
+	 * @param marca
+	 * @param descricao
+	 * @param garantia
+	 * @param avaliacao
+	 * @param curtiu
+	 * @param naoCurtiu
+	 * @param imagemDoProduto
+	 */
+	public Produto(Long codigoBarra, String nomeProduto, float valorProduto, String quantidadeProduto, String marca,
+			String descricao, float garantia, String avaliacao, String curtiu, String naoCurtiu,
+			ImagemDoProduto imagemDoProduto) {
 		super();
 		this.codigoBarra = codigoBarra;
 		this.nomeProduto = nomeProduto;
@@ -90,6 +115,7 @@ public class Produto implements Serializable {
 		this.avaliacao = avaliacao;
 		this.curtiu = curtiu;
 		this.naoCurtiu = naoCurtiu;
+		this.imagemDoProduto = imagemDoProduto;
 	}
 
 	public Long getIdProduto() {
@@ -124,14 +150,6 @@ public class Produto implements Serializable {
 		this.valorProduto = valorProduto;
 	}
 
-	public int getQuantidadeProduto() {
-		return quantidadeProduto;
-	}
-
-	public void setQuantidadeProduto(int quantidadeProduto) {
-		this.quantidadeProduto = quantidadeProduto;
-	}
-
 	public String getMarca() {
 		return marca;
 	}
@@ -164,32 +182,36 @@ public class Produto implements Serializable {
 		return this.avaliacao = avaliacao;
 	}
 
-	public Integer getCurtiu() {
-		return curtiu;
-	}
-
-	public void setCurtiu(Integer curtiu) {
-		this.curtiu = curtiu;
-	}
-
-	public Integer getNaoCurtiu() {
-		return naoCurtiu;
-	}
-
-	public void setNaoCurtiu(Integer naoCurtiu) {
-		this.naoCurtiu = naoCurtiu;
-	}
-
 	public ImagemDoProduto getImagemDoProduto() {
 		return imagemDoProduto;
 	}
 
-	@Override
-	public String toString() {
-		return "Produto [idProduto=" + idProduto + ", codigoBarra=" + codigoBarra + ", nomeProduto=" + nomeProduto
-				+ ", valorProduto=" + valorProduto + ", quantidadeProduto=" + quantidadeProduto + ", marca=" + marca
-				+ ", descricao=" + descricao + ", garantia=" + garantia + ", avaliacao=" + avaliacao + ", curtiu="
-				+ curtiu + ", naoCurtiu=" + naoCurtiu + ", imagemDoProduto=" + imagemDoProduto + "]";
+	public String getQuantidadeProduto() {
+		return quantidadeProduto;
+	}
+
+	public void setQuantidadeProduto(String quantidadeProduto) {
+		this.quantidadeProduto = quantidadeProduto;
+	}
+
+	public String getCurtiu() {
+		return curtiu;
+	}
+
+	public void setCurtiu(String curtiu) {
+		this.curtiu = curtiu;
+	}
+
+	public String getNaoCurtiu() {
+		return naoCurtiu;
+	}
+
+	public void setNaoCurtiu(String naoCurtiu) {
+		this.naoCurtiu = naoCurtiu;
+	}
+
+	public void setImagemDoProduto(ImagemDoProduto imagemDoProduto) {
+		this.imagemDoProduto = imagemDoProduto;
 	}
 
 }

@@ -15,7 +15,7 @@ import javax.persistence.Table;
  *
  */
 @Entity @Table(name = "clientes_logado")
-@NamedQuery(name = "clienteLogado", query = "SELECT c FROM ClientesLogado c")
+@NamedQuery(name = "clientesLogado", query = "SELECT c FROM ClientesLogado c")
 public class ClientesLogado implements Serializable {
 
 	/**

@@ -31,10 +31,10 @@ public class CarrinhoDeCompra implements Serializable {
 	@Id @GeneratedValue(strategy = GenerationType.SEQUENCE) @Column(name = "id_carrinho")
 	private Long idCarrinho;
 	
-	@OneToOne
+	@OneToOne(targetEntity = ClientesCadastrado.class)
 	private ClientesCadastrado clientesCadastrado;
 	
-	@OneToMany(targetEntity = Produto.class)
+	@OneToMany(targetEntity = Produto.class) @Column(name = "lista_de_produtos_do_carrinho")
 	private List<Produto> listaDeProdutosDoCarrinho;
 
 	public CarrinhoDeCompra() {}

@@ -31,7 +31,7 @@ public class VendasRealizada implements Serializable {
 	private Long idVendaRealizadas;
 	
 	@OneToOne(targetEntity = ClientesCadastrado.class)
-	private ClientesCadastrado clientesCadastrado;
+	private ClientesCadastrado clienteCadastrado;
 	
 	@OneToMany(targetEntity = Produto.class)
 	private List<Produto> listaDeProdutosComprados;
@@ -49,26 +49,20 @@ public class VendasRealizada implements Serializable {
 		return listaDeProdutosComprados;
 	}
 
+	public ClientesCadastrado getClienteCadastrado() {
+		return clienteCadastrado;
+	}
+
+	public void setClienteCadastrado(ClientesCadastrado clienteCadastrado) {
+		this.clienteCadastrado = clienteCadastrado;
+	}
+
 	public void setListaDeProdutosComprados(List<Produto> listaDeProdutosComprados) {
 		this.listaDeProdutosComprados = listaDeProdutosComprados;
 	}
 
 	public Long getIdVendaRealizadas() {
 		return idVendaRealizadas;
-	}
-
-	public ClientesCadastrado getClientesCadastrado() {
-		return clientesCadastrado;
-	}
-
-	public void setClientesCadastrado(ClientesCadastrado clientesCadastrado) {
-		this.clientesCadastrado = clientesCadastrado;
-	}
-
-	@Override
-	public String toString() {
-		return "VendasRealizada [idVendaRealizadas=" + idVendaRealizadas + ", clientesCadastrado=" + clientesCadastrado
-				+ ", listaDeProdutosComprados=" + listaDeProdutosComprados + "]";
 	}
 
 }

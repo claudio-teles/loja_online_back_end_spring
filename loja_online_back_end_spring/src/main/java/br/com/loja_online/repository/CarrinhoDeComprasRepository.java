@@ -3,12 +3,11 @@
  */
 package br.com.loja_online.repository;
 
-import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import br.com.loja_online.model.CarrinhoDeCompra;
-import br.com.loja_online.model.Produto;
 
 /**
  * @author CLAUDIO
@@ -16,6 +15,6 @@ import br.com.loja_online.model.Produto;
  */
 public interface CarrinhoDeComprasRepository extends JpaRepository<CarrinhoDeCompra, Long> {
 
-	List<Produto> findByIdCarrinho(Long id_carrinho_de_compras);
+	Optional<CarrinhoDeCompra> findById(Long id);
 
 }
