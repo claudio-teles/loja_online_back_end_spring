@@ -64,9 +64,4 @@ public class Loja implements Serializable {
 		this.estoque = estoque;
 	}
 
-	@Override
-	public String toString() {
-		return "Loja [idLoja=" + idLoja + ", estoque=" + estoque + "]";
-	}
-
 }

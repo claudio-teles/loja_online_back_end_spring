@@ -73,10 +73,4 @@ public class CarrinhoDeCompra implements Serializable {
 		this.listaDeProdutosDoCarrinho = listaDeProdutosDoCarrinho;
 	}
 
-	@Override
-	public String toString() {
-		return "CarrinhoDeCompra [idCarrinho=" + idCarrinho + ", clientesCadastrado=" + clientesCadastrado
-				+ ", listaDeProdutosDoCarrinho=" + listaDeProdutosDoCarrinho + "]";
-	}
-
 }

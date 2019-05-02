@@ -15,7 +15,7 @@ import br.com.loja_online.model.ClientesCadastrado;
 import br.com.loja_online.model.Produto;
 import br.com.loja_online.model.VendasRealizada;
 import br.com.loja_online.repository.CarrinhoDeComprasRepository;
-import br.com.loja_online.repository.ProdutoRepository;
+import br.com.loja_online.repository.ClienteCadastradoRepository;
 import br.com.loja_online.repository.VendasRealizadaRepository;
 
 
@@ -34,31 +34,27 @@ public class VendasRealizadaController {
 	private CarrinhoDeComprasRepository carrinhoDeComprasRepository;
 	
 	@Autowired
-	private ProdutoRepository produtoRepository;
+	private ClienteCadastradoRepository clienteCadastradoRepository;
 	
 	/**
 	 * 
 	 */
 	public VendasRealizadaController() {}
 	
-	@PostMapping("/{id_produto}")
+	@PostMapping("/{id_carrinho}/{id_clienteCadastrado}")
 	@ResponseStatus(HttpStatus.OK)
-	public List<Produto> finalizarCompraDeProdutos(@PathVariable Long id_produto) {
+	public List<Produto> finalizarCompraDeProdutos(@PathVariable Long id_carrinho, @PathVariable Long id_clienteCadastrado) {
 		
-		/*
-		 * CarrinhoDeCompra carrinhoDeCompra = new CarrinhoDeCompra();
-		 * ClientesCadastrado cc = carrinhoDeCompra.getClientesCadastrado();
-		 * 
-		 * VendasRealizada vendaFinalizada = new VendasRealizada();
-		 * vendaFinalizada.setClienteCadastrado(cc);
-		 * vendaFinalizada.setListaDeProdutosComprados(
-		 * carrinhoDeCompra.getListaDeProdutosDoCarrinho() .add(
-		 * produtoRepository.getOne(id_produto) ) );
-		 * 
-		 * reposioritoDeVendas.save(vendaFinalizada);
-		 */
+		ClientesCadastrado clientesCadastrado = clienteCadastradoRepository.getOne(id_clienteCadastrado);
+		List<Produto> listaDeProdutosDoCarrinho = carrinhoDeComprasRepository.getOne(id_carrinho).getListaDeProdutosDoCarrinho();
+		CarrinhoDeCompra carrinhoDeCompra = new CarrinhoDeCompra(clientesCadastrado, listaDeProdutosDoCarrinho);
 		
-		return null;
+		VendasRealizada vendaFinalizada = new VendasRealizada();
+		vendaFinalizada.setClienteCadastrado(clientesCadastrado);
+		vendaFinalizada.setListaDeProdutosComprados(carrinhoDeCompra.getListaDeProdutosDoCarrinho());
+		reposioritoDeVendas.save(vendaFinalizada);
+		
+		return listaDeProdutosDoCarrinho;
 	}
 
 }

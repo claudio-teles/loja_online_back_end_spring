@@ -55,10 +55,4 @@ public class Liquidacao implements Serializable {
 		this.listaDeProdutosEmLiquidacao = listaDeProdutosEmLiquidacao;
 	}
 
-	@Override
-	public String toString() {
-		return "Liquidacao [idLiquidacao=" + idLiquidacao + ", listaDeProdutosEmLiquidacao="
-				+ listaDeProdutosEmLiquidacao + "]";
-	}
-
 }

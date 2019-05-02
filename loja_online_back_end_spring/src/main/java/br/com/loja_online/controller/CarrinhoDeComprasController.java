@@ -3,12 +3,13 @@ package br.com.loja_online.controller;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -38,7 +39,7 @@ public class CarrinhoDeComprasController {
 
 	private List<Produto> listaDeProdutos = new ArrayList<>();
 
-	private boolean clienteLogado = true;
+	private boolean clienteLogado = false;
 
 	public CarrinhoDeComprasController() {
 	}
@@ -86,65 +87,32 @@ public class CarrinhoDeComprasController {
 		return null;
 	}
 
-	@PutMapping("/{id_carrinho}/{id_produto}")
+	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
 	public List<Produto> adicionarProdutoAoCarrinhoDeCompras(
-				@PathVariable Long id_carrinho, 
-				@PathVariable Long id_produto
+			@RequestBody Map<String, Long> produtoJson
 			) {
-		if (clienteLogado) {
-			
-			Produto produtoAdicionado = repositorioDeProdutosDoEstoque.getOne(id_produto);
-			
-			int quantidadeInicial = 1;
-
-			carrinhoDeCompra = repositorioCarrinhosDeCompras.getOne(id_carrinho);
-			Produto produto = repositorioDeProdutosDoEstoque.getOne(id_produto);
-			
-			if ( !carrinhoDeCompra.getListaDeProdutosDoCarrinho().contains(produtoAdicionado) ) {
-				produto.setQuantidadeProduto(String.valueOf(quantidadeInicial));
-				carrinhoDeCompra.getListaDeProdutosDoCarrinho().add(produto);
-				carrinho.getListaDeProdutosDoCarrinho().add(produto);
-				repositorioCarrinhosDeCompras.save(carrinhoDeCompra);
-				Produto p = repositorioDeProdutosDoEstoque.getOne(id_produto);
-				String quantidade = p.getQuantidadeProduto();
-				int novaQuantidade = Integer.parseInt(quantidade);
-				p.setQuantidadeProduto(String.valueOf(novaQuantidade - 1));
-				repositorioDeProdutosDoEstoque.save(p);
-				return carrinhoDeCompra.getListaDeProdutosDoCarrinho();
-			} else {
-				produto.setQuantidadeProduto(String.valueOf(quantidadeInicial + 1));
-				carrinhoDeCompra.getListaDeProdutosDoCarrinho().add(produto);
-				carrinho.getListaDeProdutosDoCarrinho().add(produto);
-				repositorioCarrinhosDeCompras.save(carrinhoDeCompra);
-				Produto p = repositorioDeProdutosDoEstoque.getOne(id_produto);
-				String quantidade = p.getQuantidadeProduto();
-				int novaQuantidade = Integer.parseInt(quantidade);
-				p.setQuantidadeProduto(String.valueOf(novaQuantidade - 1));
-				repositorioDeProdutosDoEstoque.save(p);
-				return carrinhoDeCompra.getListaDeProdutosDoCarrinho();
-			}
-
-
+		if (clienteLogado == true) {
+			carrinhoDeCompra = repositorioCarrinhosDeCompras.getOne( produtoJson.get("id_carrinho") );
+			List<Produto> produtos = carrinhoDeCompra.getListaDeProdutosDoCarrinho();
+			produtos.add( repositorioDeProdutosDoEstoque.getOne( produtoJson.get("id_produto") ) );
+			repositorioCarrinhosDeCompras.save(carrinhoDeCompra);
+			return produtos;
 		}
 		return null;
 	}
 
-	@PutMapping
+	@RequestMapping
 	@ResponseStatus(HttpStatus.OK)
-	public List<Produto> removerProdutosDoCarrinhoDeCompra(@RequestBody Map<String, String> produtoJson) {
+	public List<Produto> removerProdutosDoCarrinhoDeCompra(@RequestBody Map<String, Long> produtoJson) {
 		if (clienteLogado) {
-			carrinhoDeCompra = repositorioCarrinhosDeCompras.getOne( Long.parseLong(produtoJson.get("id_carrinho") ));
-			Produto produto = repositorioDeProdutosDoEstoque.getOne( Long.parseLong(produtoJson.get("id_produto") ));
-			carrinhoDeCompra.getListaDeProdutosDoCarrinho().remove(produto);
-			carrinho.getListaDeProdutosDoCarrinho().remove(produto);
+			Optional<CarrinhoDeCompra> optCarrrinho = repositorioCarrinhosDeCompras
+					.findById( produtoJson.get("id_carrinho") );
+			CarrinhoDeCompra carrinhoDeCompra = optCarrrinho.get();
+			List<Produto> produtos = carrinhoDeCompra.getListaDeProdutosDoCarrinho();
+			produtos.remove( repositorioDeProdutosDoEstoque.getOne( produtoJson.get("id_produto") ) );
 			repositorioCarrinhosDeCompras.save(carrinhoDeCompra);
-			Produto p = repositorioDeProdutosDoEstoque.getOne( Long.parseLong(produtoJson.get("id_produto") ));
-			String quantidade = p.getQuantidadeProduto();
-			int novaQuantidade = Integer.parseInt(quantidade);
-			p.setQuantidadeProduto( String.valueOf(novaQuantidade + 1) );
-			repositorioDeProdutosDoEstoque.save(p);
-			return carrinhoDeCompra.getListaDeProdutosDoCarrinho();
+			return produtos;
 		}
 		return null;
 	}

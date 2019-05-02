@@ -280,15 +280,4 @@ public class ClientesCadastrado implements Serializable {
 		this.carrinhoDeCompra = carrinhoDeCompra;
 	}
 
-	@Override
-	public String toString() {
-		return "ClientesCadastrado [idCliente=" + idCliente + ", primeiroNome=" + primeiroNome + ", sobreNome="
-				+ sobreNome + ", nomeDeUsuario=" + nomeDeUsuario + ", senha=" + senha + ", rg=" + rg + ", cpf=" + cpf
-				+ ", rua=" + rua + ", numeroResidencia=" + numeroResidencia + ", complemento=" + complemento
-				+ ", bairro=" + bairro + ", cidade=" + cidade + ", estado=" + estado + ", pais=" + pais + ", tipoConta="
-				+ tipoConta + ", variacao=" + variacao + ", bandeira=" + bandeira + ", nomeConta=" + nomeConta
-				+ ", numeroConta=" + numeroConta + ", mesValidadeCartao=" + mesValidadeCartao + ", anoValidadeCartao="
-				+ anoValidadeCartao + ", carrinhoDeCompra=" + carrinhoDeCompra + "]";
-	}
-	
 }

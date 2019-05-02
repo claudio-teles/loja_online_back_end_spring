@@ -89,10 +89,4 @@ public class Estoque implements Serializable {
 		this.liquidacao = liquidacao;
 	}
 
-	@Override
-	public String toString() {
-		return "Estoque [idEstoque=" + idEstoque + ", listaDeProdutosDoEstoque=" + listaDeProdutosDoEstoque
-				+ ", itensVistos=" + itensVistos + ", liquidacao=" + liquidacao + "]";
-	}
-
 }

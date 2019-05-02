@@ -51,10 +51,4 @@ public class ClientesLogado implements Serializable {
 		this.statusClienteLogado = statusClienteLogado;
 	}
 
-	@Override
-	public String toString() {
-		return "ClientesLogado [idClienteLogado=" + idClienteLogado + ", statusClienteLogado=" + statusClienteLogado
-				+ "]";
-	}
-
 }

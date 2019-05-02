@@ -50,9 +50,4 @@ public class ImagemDoProduto implements Serializable {
 		this.localDaImagem = localDaImagem;
 	}
 
-	@Override
-	public String toString() {
-		return "ImagemDoProduto [idImagem=" + idImagem + ", localDaImagem=" + localDaImagem + "]";
-	}
-
 }

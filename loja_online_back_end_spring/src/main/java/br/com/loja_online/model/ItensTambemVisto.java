@@ -61,9 +61,4 @@ public class ItensTambemVisto implements Serializable {
 		this.listaDeItensTambemVistos = listaDeItensTambemVistos;
 	}
 
-	@Override
-	public String toString() {
-		return "ItensTambemVisto [idItens=" + idItens + ", listaDeItensTambemVistos=" + listaDeItensTambemVistos + "]";
-	}
-
 }
