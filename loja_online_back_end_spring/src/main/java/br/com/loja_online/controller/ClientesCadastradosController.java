@@ -24,19 +24,45 @@ import br.com.loja_online.repository.ClienteLogadoRepository;
 @RequestMapping("api/clientes_cadastrados")
 public class ClientesCadastradosController {
 	
-	public static Long ultimo_id = null;
-
 	@Autowired
 	private ClienteCadastradoRepository repositorioClientesCadastrado;
 	
 	@Autowired
 	private ClienteLogadoRepository clienteLogadoRepository;
+	
+	private String primeiroNome;
+	private String sobreNome;
+	private String nomeDeUsuario;
 
 	/**
 	 * 
 	 */
 	public ClientesCadastradosController() {}
 	
+	public String getPrimeiroNome() {
+		return primeiroNome;
+	}
+
+	public void setPrimeiroNome(String primeiroNome) {
+		this.primeiroNome = primeiroNome;
+	}
+
+	public String getSobreNome() {
+		return sobreNome;
+	}
+
+	public void setSobreNome(String sobreNome) {
+		this.sobreNome = sobreNome;
+	}
+
+	public String getNomeDeUsuario() {
+		return nomeDeUsuario;
+	}
+
+	public void setNomeDeUsuario(String nomeDeUsuario) {
+		this.nomeDeUsuario = nomeDeUsuario;
+	}
+
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
 	public ClientesCadastrado cadastrarUmCliente(@RequestBody Map<String, String> cadastroJson) {
@@ -65,6 +91,10 @@ public class ClientesCadastradosController {
 		clienteCadastrado.setNumeroConta( cadastroJson.get( "numero_da_conta" ) );
 		clienteCadastrado.setMesValidadeCartao( cadastroJson.get( "mes" ) );
 		clienteCadastrado.setAnoValidadeCartao( cadastroJson.get( "ano" ) );
+		
+		setPrimeiroNome( cadastroJson.get( "primeiro_nome" ) );
+		setSobreNome( cadastroJson.get( "sobre_nome" ) );
+		setNomeDeUsuario( cadastroJson.get( "nome_de_usuario" ) );
 		
 		ClientesLogado clienteLogado = new ClientesLogado();
 		clienteLogado.setStatusClienteLogado(false);

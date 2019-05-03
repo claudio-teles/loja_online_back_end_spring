@@ -10,7 +10,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 /**
@@ -30,8 +29,9 @@ public class VendasRealizada implements Serializable {
 	@Id @GeneratedValue(strategy = GenerationType.SEQUENCE) @Column(name = "id_venda_realizada")
 	private Long idVendaRealizadas;
 	
-	@OneToOne(targetEntity = ClientesCadastrado.class)
-	private ClientesCadastrado clienteCadastrado;
+	private String primeiroNome;
+	private String sobreNome;
+	private String nomeDeUsuario;
 	
 	@OneToMany(targetEntity = Produto.class)
 	private List<Produto> listaDeProdutosComprados;
@@ -45,16 +45,32 @@ public class VendasRealizada implements Serializable {
 		this.idVendaRealizadas = idVendaRealizadas;
 	}
 
+	public String getPrimeiroNome() {
+		return primeiroNome;
+	}
+
+	public void setPrimeiroNome(String primeiroNome) {
+		this.primeiroNome = primeiroNome;
+	}
+
+	public String getSobreNome() {
+		return sobreNome;
+	}
+
+	public void setSobreNome(String sobreNome) {
+		this.sobreNome = sobreNome;
+	}
+
+	public String getNomeDeUsuario() {
+		return nomeDeUsuario;
+	}
+
+	public void setNomeDeUsuario(String nomeDeUsuario) {
+		this.nomeDeUsuario = nomeDeUsuario;
+	}
+
 	public List<Produto> getListaDeProdutosComprados() {
 		return listaDeProdutosComprados;
-	}
-
-	public ClientesCadastrado getClienteCadastrado() {
-		return clienteCadastrado;
-	}
-
-	public void setClienteCadastrado(ClientesCadastrado clienteCadastrado) {
-		this.clienteCadastrado = clienteCadastrado;
 	}
 
 	public void setListaDeProdutosComprados(List<Produto> listaDeProdutosComprados) {
