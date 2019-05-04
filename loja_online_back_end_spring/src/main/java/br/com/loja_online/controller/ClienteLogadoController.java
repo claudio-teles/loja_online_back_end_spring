@@ -9,6 +9,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,6 +27,7 @@ import br.com.loja_online.repository.ClienteLogadoRepository;
  * @author CLAUDIO
  *
  */
+@CrossOrigin
 @RestController
 @RequestMapping("api/clientes_logados")
 public class ClienteLogadoController {

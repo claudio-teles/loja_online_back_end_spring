@@ -26,7 +26,8 @@ public class VendasRealizada implements Serializable {
 	 */
 	private static final long serialVersionUID = 7403371820126142464L;
 	
-	@Id @GeneratedValue(strategy = GenerationType.SEQUENCE) @Column(name = "id_venda_realizada")
+	@Id @GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@Column(name = "id_venda_realizada")
 	private Long idVendaRealizadas;
 	
 	private String primeiroNome;
@@ -80,5 +81,6 @@ public class VendasRealizada implements Serializable {
 	public Long getIdVendaRealizadas() {
 		return idVendaRealizadas;
 	}
+
 
 }

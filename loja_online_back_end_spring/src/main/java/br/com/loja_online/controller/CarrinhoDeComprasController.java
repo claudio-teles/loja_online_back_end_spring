@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,6 +23,7 @@ import br.com.loja_online.repository.ProdutoRepository;
  * @author CLAUDIO
  *
  */
+@CrossOrigin
 @RestController
 @RequestMapping("/api/carrinho_de_compras")
 public class CarrinhoDeComprasController {
@@ -85,9 +87,6 @@ public class CarrinhoDeComprasController {
 			 setListaDeProdutos( carrinhoDoClienteLogado.getListaDeProdutosDoCarrinho() );
 			 getListaDeProdutos().add( repositorioDeProdutosDoEstoque.getOne(id_produto) );
 			 
-			 VendasRealizadaController vendasRealizadaController = new VendasRealizadaController();
-			 vendasRealizadaController.setCarrinhoVendas(getCarrinhoDeCompra());
-			 
 			 repositorioCarrinhosDeCompras.save( getCarrinhoDeCompra() );
 			 
 			 return getListaDeProdutos();
@@ -103,9 +102,6 @@ public class CarrinhoDeComprasController {
 					 .getOne(id_carrinho);
 			 setListaDeProdutos( carrinhoDoClienteLogado.getListaDeProdutosDoCarrinho() );
 			 getListaDeProdutos().remove( repositorioDeProdutosDoEstoque.getOne(id_produto) );
-			 
-			 VendasRealizadaController vendasRealizadaController = new VendasRealizadaController();
-			 vendasRealizadaController.setCarrinhoVendas(getCarrinhoDeCompra());
 			 
 			 repositorioCarrinhosDeCompras.save( getCarrinhoDeCompra() );
 			 return getListaDeProdutos();
