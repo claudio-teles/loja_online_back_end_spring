@@ -204,7 +204,6 @@ INSERT INTO esquema_loja_online.produto(
 	id_produto, avaliacao, codigo_barra, curtiu, descricao, garantia, marca, nao_curtiu, nome_produto, quantidade_produto, valor_produto, imagem_do_produto_id_imagem)
 	VALUES (4, 'Ótimo produto.', 54290793, 1, 'Unique
 Assim será a sua experiência com o nosso All in One Premium. Conheça os atributos dessa linha e confirme, ele é único!
-
 Vamos começar pela experiência visual
 Com uma tela Full Hd de 24" com 2ms.', 3, 'Unique', 0, 'Computador All In One 3green Unique Intel Core I3 4gb HD 1tb 24.5" Ajuste Rotação E Altura.', 130, 2479.00, 4);
 
@@ -323,7 +322,6 @@ INSERT INTO esquema_loja_online.produto(
 INSERT INTO esquema_loja_online.produto(
 	id_produto, avaliacao, codigo_barra, curtiu, descricao, garantia, marca, nao_curtiu, nome_produto, quantidade_produto, valor_produto, imagem_do_produto_id_imagem)
 	VALUES (27, '', 40742220, '6', 'Óculos de realidade virtual 3D
-
 Android 4.4
 Wi-Fi
 Resolução: 1280/720
