@@ -22,166 +22,166 @@ INSERT INTO esquema_loja_online.administrador_do_site(
 
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (1, 'https://drive.google.com/open?id=13VfCgiPriKRKLQGm9wFsQCk4TmqimgWy');
+	VALUES (1, 'https://drive.google.com/file/d/13VfCgiPriKRKLQGm9wFsQCk4TmqimgWy/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (2, 'https://drive.google.com/open?id=1Jngqc5B7tUotJ2PwiqD1qlmcCvriSdjD');
+	VALUES (2, 'https://drive.google.com/file/d/1Jngqc5B7tUotJ2PwiqD1qlmcCvriSdjD/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (3, 'https://drive.google.com/open?id=1JBdKwDJBVAcZWyY05UOW2n4LkV-ryOvq');
+	VALUES (3, 'https://drive.google.com/file/d/1JBdKwDJBVAcZWyY05UOW2n4LkV-ryOvq/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (4, 'https://drive.google.com/open?id=1ANEX42j6tSBQVGslgc4CG0gZPE36ud1o');
+	VALUES (4, 'https://drive.google.com/file/d/1ANEX42j6tSBQVGslgc4CG0gZPE36ud1o/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (5, 'https://drive.google.com/open?id=1OXE3z-zHWGd91r-Ln6tENeyvsDZzcqMZ');
+	VALUES (5, 'https://drive.google.com/file/d/1OXE3z-zHWGd91r-Ln6tENeyvsDZzcqMZ/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (6, 'https://drive.google.com/open?id=1LYr8HE4ELjajLxIqea4y0svMHDZdARVw');
+	VALUES (6, 'https://drive.google.com/file/d/1LYr8HE4ELjajLxIqea4y0svMHDZdARVw/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (7, 'https://drive.google.com/open?id=1SzQFewJS_NOrvwzh1G4hFgH1cDFDZWMG');
+	VALUES (7, 'https://drive.google.com/file/d/1SzQFewJS_NOrvwzh1G4hFgH1cDFDZWMG/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (8, 'https://drive.google.com/open?id=1UN7-7ZGL_IcgUizxpvqtOjplAft71pIo');
+	VALUES (8, 'https://drive.google.com/file/d/1UN7-7ZGL_IcgUizxpvqtOjplAft71pIo/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (9, 'https://drive.google.com/open?id=1tmioiVJMJjhBTWdNAiX4zXgYb5NhDUK9');
+	VALUES (9, 'https://drive.google.com/file/d/1tmioiVJMJjhBTWdNAiX4zXgYb5NhDUK9/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (10, 'https://drive.google.com/open?id=17_ImMqPjdlTTL_mMcOJuT0A8L7ZH0vUX');
+	VALUES (10, 'https://drive.google.com/file/d/17_ImMqPjdlTTL_mMcOJuT0A8L7ZH0vUX/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (11, 'https://drive.google.com/open?id=1ydk2sYfifS1sr931F11SnLwYS6uUDBYs');
+	VALUES (11, 'https://drive.google.com/file/d/1ydk2sYfifS1sr931F11SnLwYS6uUDBYs/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (12, 'https://drive.google.com/open?id=1LoPP5DiwZJUShFlU66sjTA7c91dOA7WJ');
+	VALUES (12, 'https://drive.google.com/file/d/1LoPP5DiwZJUShFlU66sjTA7c91dOA7WJ/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (13, 'https://drive.google.com/open?id=14TcgpfEdzTpET7YXMC_h6hj6cg2dylYG');
+	VALUES (13, 'https://drive.google.com/file/d/14TcgpfEdzTpET7YXMC_h6hj6cg2dylYG/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (14, 'https://drive.google.com/open?id=1rqCtnmWE87-bqysz4KF78DDsf8Lowbb-');
+	VALUES (14, 'https://drive.google.com/file/d/1rqCtnmWE87-bqysz4KF78DDsf8Lowbb-/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (15, 'https://drive.google.com/open?id=1tV17uhG2qx9jKl4GFRqSFS7Dd3eCgFe5');
+	VALUES (15, 'https://drive.google.com/file/d/1tV17uhG2qx9jKl4GFRqSFS7Dd3eCgFe5/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (16, 'https://drive.google.com/open?id=1ycMTTQyI2LmMD_e8udH7d09XlOsuu1CB');
+	VALUES (16, 'https://drive.google.com/file/d/1ycMTTQyI2LmMD_e8udH7d09XlOsuu1CB/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (17, 'https://drive.google.com/open?id=1VFrHwZX_o1lQTO007xS13VGBoVsNyfwP');
+	VALUES (17, 'https://drive.google.com/file/d/1VFrHwZX_o1lQTO007xS13VGBoVsNyfwP/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (18, 'https://drive.google.com/open?id=1BPHbAsEAaIypZAnp85lskzk-g2KUmVtL');
+	VALUES (18, 'https://drive.google.com/file/d/1BPHbAsEAaIypZAnp85lskzk-g2KUmVtL/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (19, 'https://drive.google.com/open?id=1XfiPNzSdWKWmBBTf3lWjck7MpHxUv7az');
+	VALUES (19, 'https://drive.google.com/file/d/1XfiPNzSdWKWmBBTf3lWjck7MpHxUv7az/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (20, 'https://drive.google.com/open?id=19MkO2iQRp3Ot7N8uRveA38BcujkOJLGc');
+	VALUES (20, 'https://drive.google.com/file/d/19MkO2iQRp3Ot7N8uRveA38BcujkOJLGc/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (21, 'https://drive.google.com/open?id=1fy_6mzCefQh4BHQRre_833Gg14lsi6rj');
+	VALUES (21, 'https://drive.google.com/file/d/1fy_6mzCefQh4BHQRre_833Gg14lsi6rj/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (22, 'https://drive.google.com/open?id=1XfkzSQZ_eWAgxBegqXE_WVddb8-ILsD3');
+	VALUES (22, 'https://drive.google.com/file/d/1XfkzSQZ_eWAgxBegqXE_WVddb8-ILsD3/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (23, 'https://drive.google.com/open?id=16I_TqVNYLO_HDXJO5BcHmuyH3BLPg4D0');
+	VALUES (23, 'https://drive.google.com/file/d/16I_TqVNYLO_HDXJO5BcHmuyH3BLPg4D0/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (24, 'https://drive.google.com/open?id=1it18RFEuz0dE6MQcikZrnqaRQvJOFBkw');
+	VALUES (24, 'https://drive.google.com/file/d/1it18RFEuz0dE6MQcikZrnqaRQvJOFBkw/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (25, 'https://drive.google.com/open?id=1Uz4fLbQhQW3Wxyazu-uiv7AIvXS_uTyx');
+	VALUES (25, 'https://drive.google.com/file/d/1Uz4fLbQhQW3Wxyazu-uiv7AIvXS_uTyx/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (26, 'https://drive.google.com/open?id=1tor-5RQliIaaViT8VsC7JuGOhatpULSe');
+	VALUES (26, 'https://drive.google.com/file/d/1tor-5RQliIaaViT8VsC7JuGOhatpULSe/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (27, 'https://drive.google.com/open?id=1gwozUo8En3UEyZlAXiIIuPNaxdqZsyYn');
+	VALUES (27, 'https://drive.google.com/file/d/1gwozUo8En3UEyZlAXiIIuPNaxdqZsyYn/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (28, 'https://drive.google.com/open?id=1ZvfUMaN_TT8ccHji0SXAy54HvMR9BJOY');
+	VALUES (28, 'https://drive.google.com/file/d/1ZvfUMaN_TT8ccHji0SXAy54HvMR9BJOY/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (29, 'https://drive.google.com/open?id=1aQ3RyIiW0CzRP5mVp3weq5MiDc0MLlbv');
+	VALUES (29, 'https://drive.google.com/file/d/1aQ3RyIiW0CzRP5mVp3weq5MiDc0MLlbv/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (30, 'https://drive.google.com/open?id=1oWzkcd91om4J_8GLMQCxjU_nyVFXms9R');
+	VALUES (30, 'https://drive.google.com/file/d/1oWzkcd91om4J_8GLMQCxjU_nyVFXms9R/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (31, 'https://drive.google.com/open?id=1RV1n6z_Q_Cdh5JS1_tlU8CXxjZx4BjQP');
+	VALUES (31, 'https://drive.google.com/file/d/1RV1n6z_Q_Cdh5JS1_tlU8CXxjZx4BjQP/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (32, 'https://drive.google.com/open?id=1yfEnzoprCpFP3N1p6kQMCyJh6gqNcAOX');
+	VALUES (32, 'https://drive.google.com/file/d/1yfEnzoprCpFP3N1p6kQMCyJh6gqNcAOX/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (33, 'https://drive.google.com/open?id=1KKGqpphUdXI0mnTTKGSOp-15mHVwkJWu');
+	VALUES (33, 'https://drive.google.com/file/d/1KKGqpphUdXI0mnTTKGSOp-15mHVwkJWu/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (34, 'https://drive.google.com/open?id=1oSwQFeiL5X2QYY4HfCLB3ruo3tXpR7mD');
+	VALUES (34, 'https://drive.google.com/file/d/1oSwQFeiL5X2QYY4HfCLB3ruo3tXpR7mD/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (35, 'https://drive.google.com/open?id=1gEi2_MeeF-dFwS_XcT-qvLnmYCHW68q6');
+	VALUES (35, 'https://drive.google.com/file/d/1gEi2_MeeF-dFwS_XcT-qvLnmYCHW68q6/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (36, 'https://drive.google.com/open?id=1Ph7U7vlOB7tW7LYZKY24X-6Ag6HeD-M7');
+	VALUES (36, 'https://drive.google.com/file/d/1Ph7U7vlOB7tW7LYZKY24X-6Ag6HeD-M7/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (37, 'https://drive.google.com/open?id=1fmFSHnkpXy6JKTIzhg7C3A8I3NyGCBfu');
+	VALUES (37, 'https://drive.google.com/file/d/1fmFSHnkpXy6JKTIzhg7C3A8I3NyGCBfu/view ');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (38, 'https://drive.google.com/open?id=1RTx0egCW6pP6xXoQGa0GShLO8lVBehYB');
+	VALUES (38, 'https://drive.google.com/file/d/1RTx0egCW6pP6xXoQGa0GShLO8lVBehYB/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (39, 'https://drive.google.com/open?id=1EOrXS0OIAhu01rBl-TuBoPjCtOkJTAMf');
+	VALUES (39, 'https://drive.google.com/file/d/1EOrXS0OIAhu01rBl-TuBoPjCtOkJTAMf/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (40, 'https://drive.google.com/open?id=1uo_NC33QdbAlq9SASTgJV9VN5NuwmHUT');
+	VALUES (40, 'https://drive.google.com/file/d/1uo_NC33QdbAlq9SASTgJV9VN5NuwmHUT/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (41, 'https://drive.google.com/open?id=1y-nYs6_D5e72z3qg2_YzDkcEspgxkam4');
+	VALUES (41, 'https://drive.google.com/file/d/1y-nYs6_D5e72z3qg2_YzDkcEspgxkam4/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (42, 'https://drive.google.com/open?id=1Vjq4nLZ8k1v034mYGwVfKomSViZjEfsz');
+	VALUES (42, 'https://drive.google.com/file/d/1Vjq4nLZ8k1v034mYGwVfKomSViZjEfsz/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (43, 'https://drive.google.com/open?id=1IFGAFn97oMNQV6P41feqwqrW3eFcdB2m');
+	VALUES (43, 'https://drive.google.com/file/d/1IFGAFn97oMNQV6P41feqwqrW3eFcdB2m/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (44, 'https://drive.google.com/open?id=1Ao-L4deCtCrX47z2O66MTVuFjZQaAhLa');
+	VALUES (44, 'https://drive.google.com/file/d/1Ao-L4deCtCrX47z2O66MTVuFjZQaAhLa/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (45, 'https://drive.google.com/open?id=1XUpXvdN2M9e0twQRUFR7jakzILbZkRRN');
+	VALUES (45, 'https://drive.google.com/file/d/1XUpXvdN2M9e0twQRUFR7jakzILbZkRRN/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (46, 'https://drive.google.com/open?id=1Buq5Bt8KO-TvCJflbFfrWDmjLXbSqKix');
+	VALUES (46, 'https://drive.google.com/file/d/1Buq5Bt8KO-TvCJflbFfrWDmjLXbSqKix/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (47, 'https://drive.google.com/open?id=1HJVNbA8_4685nfYi_dc7Dy3Q7geCsXF_');
+	VALUES (47, 'https://drive.google.com/file/d/1HJVNbA8_4685nfYi_dc7Dy3Q7geCsXF_/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (48, 'https://drive.google.com/open?id=1iQOUyLJPCANbIM9GbNP4Kn68N0qP4j3n');
+	VALUES (48, 'https://drive.google.com/file/d/1iQOUyLJPCANbIM9GbNP4Kn68N0qP4j3n/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (49, 'https://drive.google.com/open?id=1SczRdg8oJJz_Zzdgh3EftOLwy-qide4T');
+	VALUES (49, 'https://drive.google.com/file/d/1SczRdg8oJJz_Zzdgh3EftOLwy-qide4T/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (50, 'https://drive.google.com/open?id=1RdQdlJJqWJJgh0mr_nFvovt2J1xMOkiS');
+	VALUES (50, 'https://drive.google.com/file/d/1RdQdlJJqWJJgh0mr_nFvovt2J1xMOkiS/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (51, 'https://drive.google.com/open?id=1W8nLGmDpJ8Ffjnf13pyypZeMzFBU2AA1');
+	VALUES (51, 'https://drive.google.com/file/d/1W8nLGmDpJ8Ffjnf13pyypZeMzFBU2AA1/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (52, 'https://drive.google.com/open?id=1xwZ6sFjXnkJ-ydL5BQXLUxzaKOo9dy3L');
+	VALUES (52, 'https://drive.google.com/file/d/1xwZ6sFjXnkJ-ydL5BQXLUxzaKOo9dy3L/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (53, 'https://drive.google.com/open?id=1jkudbAEkzHMIfA7VoLjwaK0uHPuW0HeA');
+	VALUES (53, 'https://drive.google.com/file/d/1jkudbAEkzHMIfA7VoLjwaK0uHPuW0HeA/view');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (54, 'https://drive.google.com/open?id=1P5f9BqKEks-o5aZox5lx14orhN4Zq51P');
+	VALUES (54, 'https://drive.google.com/file/d/1P5f9BqKEks-o5aZox5lx14orhN4Zq51P/view');
 
 /*==========================================================================*/
 
