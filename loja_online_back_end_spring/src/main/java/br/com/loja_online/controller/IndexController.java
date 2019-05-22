@@ -17,7 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/api")
 public class IndexController {
 	
-	private String mensagemDeBoasVindas = "Bem vindo a Loja Online feito com Angular e Spring.";
+	private String mensagemDeBoasVindas = "Bem vindo a Loja Online feito com Angular e Spring, "
+			+ "os produtos são fictícios.";
 	
 	private String nomeDoCliente = "";
 
