@@ -22,166 +22,166 @@ INSERT INTO esquema_loja_online.administrador_do_site(
 
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (1, 'https://drive.google.com/file/d/13VfCgiPriKRKLQGm9wFsQCk4TmqimgWy/preview');
+	VALUES (1, 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/image/AppleInc/aos/published/images/a/ir/airpods/wireless/airpods-wireless-charge-case-201903?wid=300&hei=390&fmt=png-alpha&qlt=80&.v=1551389040514');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (2, 'https://drive.google.com/file/d/1Jngqc5B7tUotJ2PwiqD1qlmcCvriSdjD/preview');
+	VALUES (2, 'https://t.tudocdn.net/205802?w=160&h=304');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (3, 'https://drive.google.com/file/d/1JBdKwDJBVAcZWyY05UOW2n4LkV-ryOvq/preview');
+	VALUES (3, 'https://loja.meupositivo.com.br/Assets/Produtos/Gigantes/aio2.jpg?v=f07605d3-1');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (4, 'https://drive.google.com/file/d/1ANEX42j6tSBQVGslgc4CG0gZPE36ud1o/preview');
+	VALUES (4, 'https://images-shoptime.b2w.io/produtos/01/00/oferta/54290/7/54290796_1GG.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (5, 'https://drive.google.com/file/d/1OXE3z-zHWGd91r-Ln6tENeyvsDZzcqMZ/preview');
+	VALUES (5, 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/image/AppleInc/aos/published/images/3/8/38/alu/38-alu-space-sport-black-nc-1up_GEO_BR?wid=470&hei=556&fmt=png-alpha&.v=1536108995001');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (6, 'https://drive.google.com/file/d/1LYr8HE4ELjajLxIqea4y0svMHDZdARVw/preview');
+	VALUES (6, 'https://images-shoptime.b2w.io/produtos/01/00/oferta/39804/5/39804574_1GG.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (7, 'https://drive.google.com/file/d/1SzQFewJS_NOrvwzh1G4hFgH1cDFDZWMG/preview');
+	VALUES (7, 'https://images.samsung.com/is/image/samsung/br-gear-360-2017-sm-r210nzwazto-keywhite-61736821?$PD_GALLERY_L_JPG$');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (8, 'https://drive.google.com/file/d/1UN7-7ZGL_IcgUizxpvqtOjplAft71pIo/preview');
+	VALUES (8, 'https://images-na.ssl-images-amazon.com/images/I/41hkHlRburL.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (9, 'https://drive.google.com/file/d/1tmioiVJMJjhBTWdNAiX4zXgYb5NhDUK9/preview');
+	VALUES (9, 'https://images-shoptime.b2w.io/produtos/01/00/oferta/13331/8/13331806_1GG.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (10, 'https://drive.google.com/file/d/17_ImMqPjdlTTL_mMcOJuT0A8L7ZH0vUX/preview');
+	VALUES (10, 'https://www.casasbahia-imagens.com.br/Informatica/Computadores/14147609/1051932845/computador-com-monitor-156-quot-led-corpc-intel-core-i3-6gb-hd-500gb-wifi-14147609.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (11, 'https://drive.google.com/file/d/1ydk2sYfifS1sr931F11SnLwYS6uUDBYs/preview');
+	VALUES (11, 'https://m.media-amazon.com/images/I/5116Mpd+wWL._AC_UL436_.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (12, 'https://drive.google.com/file/d/1LoPP5DiwZJUShFlU66sjTA7c91dOA7WJ/preview');
+	VALUES (12, 'https://images-americanas.b2w.io/produtos/01/00/item/120585/8/120585883_1GG.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (13, 'https://drive.google.com/file/d/14TcgpfEdzTpET7YXMC_h6hj6cg2dylYG/preview');
+	VALUES (13, 'https://m.media-amazon.com/images/I/6130NGFVWRL._AC_UL436_.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (14, 'https://drive.google.com/file/d/1rqCtnmWE87-bqysz4KF78DDsf8Lowbb-/preview');
+	VALUES (14, 'https://images-americanas.b2w.io/produtos/01/00/item/125540/5/125540588_1GG.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (15, 'https://drive.google.com/file/d/1tV17uhG2qx9jKl4GFRqSFS7Dd3eCgFe5/preview');
+	VALUES (15, 'https://www.casasbahia-imagens.com.br/tv-video/HomeTheater/aparelhosHomeTheater/12123384/878221649/home-theater-philco-pht700bt-5-1-canais-bluetooth-funcao-karaoke-entrada-usb-e-saida-hdmi-550w-12123384.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (16, 'https://drive.google.com/file/d/1ycMTTQyI2LmMD_e8udH7d09XlOsuu1CB/preview');
+	VALUES (16, 'hhttps://www.pontofrio-imagens.com.br/TelefoneseCelulares/Smartphones/Android/13891286/1115163283/smartphone-lg-k11-32gb-dual-chip-android-70-tela-53-quot-octa-core-15-ghz-4g-camera-13mp-dourado-13891286.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (17, 'https://drive.google.com/file/d/1VFrHwZX_o1lQTO007xS13VGBoVsNyfwP/preview');
+	VALUES (17, 'https://www.casasbahia-imagens.com.br/audio/MicroeMiniSystem/11548163/842670083/mini-system-lg-cj44-xboom-dual-usb-funcao-karaoke-440w-11548163.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (18, 'https://drive.google.com/file/d/1BPHbAsEAaIypZAnp85lskzk-g2KUmVtL/preview');
+	VALUES (18, 'https://images-submarino.b2w.io/produtos/01/00/offers/01/00/item/134186/2/134186285_1GG.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (19, 'https://drive.google.com/file/d/1XfiPNzSdWKWmBBTf3lWjck7MpHxUv7az/preview');
+	VALUES (19, 'https://images-americanas.b2w.io/produtos/01/00/oferta/52520/9/52520921_4GG.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (20, 'https://drive.google.com/file/d/19MkO2iQRp3Ot7N8uRveA38BcujkOJLGc/preview');
+	VALUES (20, 'https://images-shoptime.b2w.io/produtos/01/00/oferta/46971/4/46971479_2GG.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (21, 'https://drive.google.com/file/d/1fy_6mzCefQh4BHQRre_833Gg14lsi6rj/preview');
+	VALUES (21, 'https://images-na.ssl-images-amazon.com/images/I/61EiR6N0DPL._SL1000_.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (22, 'https://drive.google.com/file/d/1XfkzSQZ_eWAgxBegqXE_WVddb8-ILsD3/preview');
+	VALUES (22, 'https://a-static.mlcdn.com.br/618x463/notebook-dell-inspiron-15-i15-3567-a30p-serie-3000-intel-core-i5-4gb-1tb-156-windows-10/magazineluiza/220278900/2cf9fa2960ec57529a50e4f3a3a03ab4.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (23, 'https://drive.google.com/file/d/16I_TqVNYLO_HDXJO5BcHmuyH3BLPg4D0/preview');
+	VALUES (23, 'https://www.extra-imagens.com.br/Informatica/Notebook/13382662/993512512/notebook-lenovo-core-i5-8250u-8gb-1tb-tela-15-6-windows-10-ideapad-330-13382662.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (24, 'https://drive.google.com/file/d/1it18RFEuz0dE6MQcikZrnqaRQvJOFBkw/preview');
+	VALUES (24, 'https://images-submarino.b2w.io/produtos/01/00/offers/01/00/item/133621/7/133621767_2GG.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (25, 'https://drive.google.com/file/d/1Uz4fLbQhQW3Wxyazu-uiv7AIvXS_uTyx/preview');
+	VALUES (25, 'https://www.pontofrio-imagens.com.br/TelefoneseCelulares/AcessoriosparaCelulares/oculos-realidade-virtual/7417622/334392349/oculos-de-realidade-virtual-samsung-gear-vr-branco-7417622.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (26, 'https://drive.google.com/file/d/1tor-5RQliIaaViT8VsC7JuGOhatpULSe/preview');
+	VALUES (26, 'https://images-shoptime.b2w.io/produtos/01/00/oferta/39525/7/39525799_1GG.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (27, 'https://drive.google.com/file/d/1gwozUo8En3UEyZlAXiIIuPNaxdqZsyYn/preview');
+	VALUES (27, 'https://images-submarino.b2w.io/produtos/01/00/oferta/41336/6/41336686_1GG.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (28, 'https://drive.google.com/file/d/1ZvfUMaN_TT8ccHji0SXAy54HvMR9BJOY/preview');
+	VALUES (28, 'https://images-submarino.b2w.io/produtos/01/00/oferta/71378/5/71378504_1GG.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (29, 'https://drive.google.com/file/d/1aQ3RyIiW0CzRP5mVp3weq5MiDc0MLlbv/preview');
+	VALUES (29, 'https://www.pontofrio-imagens.com.br/Informatica/Computadores/15074493/1100866060/desktop-gamer-acer-aspire-gx-783-br13-intel-core-i7-16gb-1tb-hd-8gb-ssd-gtx-1060-6gb-windows-10-15074493.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (30, 'https://drive.google.com/file/d/1oWzkcd91om4J_8GLMQCxjU_nyVFXms9R/preview');
+	VALUES (30, 'https://www.casasbahia-imagens.com.br/Informatica/Computadores/14082525/1048327509/pc-gamer-completo-smart-pc-smt81072-i5-8gb-geforce-gtx-1050ti-4gb-1tb-cadeira-gamer-14082525.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (31, 'https://drive.google.com/file/d/1RV1n6z_Q_Cdh5JS1_tlU8CXxjZx4BjQP/preview');
+	VALUES (31, 'https://images-shoptime.b2w.io/produtos/01/00/item/122423/9/122423925_1GG.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (32, 'https://drive.google.com/file/d/1yfEnzoprCpFP3N1p6kQMCyJh6gqNcAOX/preview');
+	VALUES (32, 'https://images-americanas.b2w.io/produtos/01/00/oferta/48298/3/48298375_1GG.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (33, 'https://drive.google.com/file/d/1KKGqpphUdXI0mnTTKGSOp-15mHVwkJWu/preview');
+	VALUES (33, 'https://images-na.ssl-images-amazon.com/images/I/61gpXYLLyBL._SX522_.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (34, 'https://drive.google.com/file/d/1oSwQFeiL5X2QYY4HfCLB3ruo3tXpR7mD/preview');
+	VALUES (34, 'https://images-submarino.b2w.io/produtos/01/00/oferta/31524/3/31524311_1GG.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (35, 'https://drive.google.com/file/d/1gEi2_MeeF-dFwS_XcT-qvLnmYCHW68q6/preview');
+	VALUES (35, 'https://www.extra-imagens.com.br/TelefoneseCelulares/Smartwatches/13003968/1057583855/relogio-smartwatch-dz09-e-fone-bluetooth-original-touch-bl-13003968.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (36, 'https://drive.google.com/file/d/1Ph7U7vlOB7tW7LYZKY24X-6Ag6HeD-M7/preview');
+	VALUES (36, 'https://images-americanas.b2w.io/produtos/01/00/item/132691/1/132691106_1GG.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (37, 'https://drive.google.com/file/d/1fmFSHnkpXy6JKTIzhg7C3A8I3NyGCBfu/preview ');
+	VALUES (37, 'https://i.zst.com.br/images/smartphone-samsung-galaxy-j8-sm-j810m-64gb-16-0-mp-2-chips-android-8-0-oreo-3g-4g-wi-fi-photo603807920-45-13-1f.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (38, 'https://drive.google.com/file/d/1RTx0egCW6pP6xXoQGa0GShLO8lVBehYB/preview');
+	VALUES (38, 'https://images.samsung.com/is/image/samsung/br-galaxy-s9-sm-g960-sm-g9600zbkzto-lblue-108109026?$PD_GALLERY_PNG$');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (39, 'https://drive.google.com/file/d/1EOrXS0OIAhu01rBl-TuBoPjCtOkJTAMf/preview');
+	VALUES (39, 'https://images.samsung.com/is/image/samsung/br-galaxy-s10-sm-g975-sm-g975fzbjzto-lprismblue-159101947?$PD_GALLERY_PNG$');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (40, 'https://drive.google.com/file/d/1uo_NC33QdbAlq9SASTgJV9VN5NuwmHUT/preview');
+	VALUES (40, 'https://a-static.mlcdn.com.br/618x463/smart-tv-4k-led-50-aoc-le50u7970s-conversor-digital-4-hdmi-2-usb/magazineluiza/193419600/e69e0d46dc2c8dbf2ae03ca8ee020fbb.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (41, 'https://drive.google.com/file/d/1y-nYs6_D5e72z3qg2_YzDkcEspgxkam4/preview');
+	VALUES (41, 'https://images-americanas.b2w.io/produtos/01/00/offers/01/00/item/133403/7/133403743_1GG.png');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (42, 'https://drive.google.com/file/d/1Vjq4nLZ8k1v034mYGwVfKomSViZjEfsz/preview');
+	VALUES (42, 'https://images-soubarato.b2w.io/produtos/01/00/offers/01/00/item/133244/8/133244842_1GG.png');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (43, 'https://drive.google.com/file/d/1IFGAFn97oMNQV6P41feqwqrW3eFcdB2m/preview');
+	VALUES (43, 'https://images-americanas.b2w.io/produtos/01/00/offers/01/00/item/134162/7/134162700_1GG.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (44, 'https://drive.google.com/file/d/1Ao-L4deCtCrX47z2O66MTVuFjZQaAhLa/preview');
+	VALUES (44, 'https://a-static.mlcdn.com.br/180x200/smart-tv-led-32-samsung-un32j4300-wi-fi-conversor-digital-2-hdmi-1-usb/magazineluiza/193365700/19991cfaea3d86d85500c691ebf0146b.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (45, 'https://drive.google.com/file/d/1XUpXvdN2M9e0twQRUFR7jakzILbZkRRN/preview');
+	VALUES (45, 'https://images-submarino.b2w.io/produtos/01/00/item/131471/5/131471558_2GG.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (46, 'https://drive.google.com/file/d/1Buq5Bt8KO-TvCJflbFfrWDmjLXbSqKix/preview');
+	VALUES (46, 'https://29028l.ha.azioncdn.net/img/2018/10/produto/131291/19/large/smartwatch-samsung-galaxy-watch-bt-sm-r800-prata.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (47, 'https://drive.google.com/file/d/1HJVNbA8_4685nfYi_dc7Dy3Q7geCsXF_/preview');
+	VALUES (47, 'https://a-static.mlcdn.com.br/618x463/radio-boombox-nbx-06-entradas-usb-e-auxiliar-radio-fm-mp3-player-display-digital-3-4w-rms-mondial/efacil/159442/955d6f907195e2b2482dc07a3b4713aa.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (48, 'https://drive.google.com/file/d/1iQOUyLJPCANbIM9GbNP4Kn68N0qP4j3n/preview');
+	VALUES (48, 'https://images-shoptime.b2w.io/produtos/01/00/item/124566/1/124566196_2GG.jpg/drive.google.com/file/d/1iQOUyLJPCANbIM9GbNP4Kn68N0qP4j3n/preview');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (49, 'https://drive.google.com/file/d/1SczRdg8oJJz_Zzdgh3EftOLwy-qide4T/preview');
+	VALUES (49, 'https://a-static.mlcdn.com.br/618x463/tablet-m8w-plus-hibrido-windows-10-8-9-pol-ram-2gb-32gb-dual-camera-preto-multilaser-nb242/lojamultilaser/3029/abe6573ca4be74d7aa781fb998a7933a.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (50, 'https://drive.google.com/file/d/1RdQdlJJqWJJgh0mr_nFvovt2J1xMOkiS/preview');
+	VALUES (50, 'https://images-americanas.b2w.io/produtos/01/00/oferta/47740/6/47740610_1GG.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (51, 'https://drive.google.com/file/d/1W8nLGmDpJ8Ffjnf13pyypZeMzFBU2AA1/preview');
+	VALUES (51, 'https://www.extra-imagens.com.br/Tablets/Tablet/TabletAndroid/4826630/117656539/tablet-samsung-galaxy-tab-e-9-6-3g-sm-t561-com-tela-9-6-8gb-camera-5mp-gps-android-4-4-processador-quad-core-1-3-ghz-preto-4826630.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (52, 'https://drive.google.com/file/d/1xwZ6sFjXnkJ-ydL5BQXLUxzaKOo9dy3L/preview');
+	VALUES (52, 'https://images-submarino.b2w.io/produtos/01/00/item/132738/8/132738883_1GG.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (53, 'https://drive.google.com/file/d/1jkudbAEkzHMIfA7VoLjwaK0uHPuW0HeA/preview');
+	VALUES (53, 'https://images-americanas.b2w.io/produtos/01/00/oferta/43896/3/43896390_1GG.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (54, 'https://drive.google.com/file/d/1P5f9BqKEks-o5aZox5lx14orhN4Zq51P/preview');
+	VALUES (54, 'https://d3emhpm0gj0nik.cloudfront.net/media/catalog/product/cache/2/image/700x700/9df78eab33525d08d6e5fb8d27136e95/a/s/asus_8gb_256gb_ag_1_4_1005621_9912_236_12969_6_20180921104722.jpg');
 
 /*==========================================================================*/
 

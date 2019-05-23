@@ -51,7 +51,7 @@ public class Produto implements Serializable {
 	@Column(nullable = false)
 	private float garantia;
 	
-	
+	@Column(length = 500)
 	private String avaliacao;
 
 	private String curtiu;

@@ -26,7 +26,7 @@ public class ImagemDoProduto implements Serializable {
 	
 	@Id @GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long idImagem;
-	@Column(name = "local_da_imagem", nullable = false)
+	@Column(name = "local_da_imagem", nullable = false, length = 500)
 	private String localDaImagem;
 
 	/**
