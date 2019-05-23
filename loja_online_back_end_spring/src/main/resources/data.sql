@@ -67,7 +67,7 @@ INSERT INTO esquema_loja_online.imagem_do_produto(
 	VALUES (15, 'https://www.casasbahia-imagens.com.br/tv-video/HomeTheater/aparelhosHomeTheater/12123384/878221649/home-theater-philco-pht700bt-5-1-canais-bluetooth-funcao-karaoke-entrada-usb-e-saida-hdmi-550w-12123384.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (16, 'hhttps://www.pontofrio-imagens.com.br/TelefoneseCelulares/Smartphones/Android/13891286/1115163283/smartphone-lg-k11-32gb-dual-chip-android-70-tela-53-quot-octa-core-15-ghz-4g-camera-13mp-dourado-13891286.jpg');
+	VALUES (16, 'https://www.pontofrio-imagens.com.br/TelefoneseCelulares/Smartphones/Android/14136621/1091696234/smartphone-lg-k11-32gb-dual-chip-tela-53-camera-13mp-android-712-azul-14136621.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
 	VALUES (17, 'https://www.casasbahia-imagens.com.br/audio/MicroeMiniSystem/11548163/842670083/mini-system-lg-cj44-xboom-dual-usb-funcao-karaoke-440w-11548163.jpg');
@@ -163,7 +163,7 @@ INSERT INTO esquema_loja_online.imagem_do_produto(
 	VALUES (47, 'https://a-static.mlcdn.com.br/618x463/radio-boombox-nbx-06-entradas-usb-e-auxiliar-radio-fm-mp3-player-display-digital-3-4w-rms-mondial/efacil/159442/955d6f907195e2b2482dc07a3b4713aa.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (48, 'https://images-shoptime.b2w.io/produtos/01/00/item/124566/1/124566196_2GG.jpg/drive.google.com/file/d/1iQOUyLJPCANbIM9GbNP4Kn68N0qP4j3n/preview');
+	VALUES (48, 'https://images-shoptime.b2w.io/produtos/01/00/item/124566/1/124566196_2GG.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
 	VALUES (49, 'https://a-static.mlcdn.com.br/618x463/tablet-m8w-plus-hibrido-windows-10-8-9-pol-ram-2gb-32gb-dual-camera-preto-multilaser-nb242/lojamultilaser/3029/abe6573ca4be74d7aa781fb998a7933a.jpg');
