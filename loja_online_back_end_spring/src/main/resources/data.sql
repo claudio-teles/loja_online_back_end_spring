@@ -25,7 +25,7 @@ INSERT INTO esquema_loja_online.imagem_do_produto(
 	VALUES (1, 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/image/AppleInc/aos/published/images/a/ir/airpods/wireless/airpods-wireless-charge-case-201903?wid=300&hei=390&fmt=png-alpha&qlt=80&.v=1551389040514');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (2, 'https://t.tudocdn.net/205802?w=160&h=304');
+	VALUES (2, 'https://images-americanas.b2w.io/produtos/01/00/oferta/27173/4/27173461_1GG.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
 	VALUES (3, 'https://loja.meupositivo.com.br/Assets/Produtos/Gigantes/aio2.jpg?v=f07605d3-1');
