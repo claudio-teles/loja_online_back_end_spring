@@ -72,6 +72,8 @@ public class ClienteLogadoController {
 	@ResponseStatus(HttpStatus.OK)
 	public String fazerLogin(@RequestBody Map<String, String> loginJson) {
 		
+		this.statusClienteLogado = false;
+		
 		if (statusClienteLogado == false) {
 			
 			List<String> listaDeUsuariosCadastrados = cadastradoRepository.findAllANomeDeUsuario( loginJson.get("nome_de_usuario") );
@@ -81,25 +83,38 @@ public class ClienteLogadoController {
 			boolean senhaDeUsuario = listaDeSenhasDeUsuariosCadastrados.contains( loginJson.get("senha_de_usuario") );
 			
 			
-			if (nomeDeUsuario && senhaDeUsuario) {
-				statusClienteLogado = true;
-				System.out.println("nomeDeUsuario: "+nomeDeUsuario+".");
-				System.out.println("senhaDeUsuario: "+senhaDeUsuario+".");
-				ClientesLogado clienteLogado = clienteLogadoRepository.getOne( Long.parseLong( loginJson.get("id_cliente_logado")) );
-				clienteLogado.setStatusClienteLogado(true);
+			if ( loginJson.get("intensao").equals("login") ) {
+				if (nomeDeUsuario && senhaDeUsuario) {
+					
+					statusClienteLogado = true;
+					ClientesLogado clienteLogado = clienteLogadoRepository
+							.getOne(Long.parseLong(loginJson.get("id_cliente_logado")));
+					clienteLogado.setStatusClienteLogado(true);
+					clienteLogadoRepository.save(clienteLogado);
+
+					CarrinhoDeComprasController comprasController = new CarrinhoDeComprasController();
+					comprasController.setClienteLogado(true);
+
+					carrinho = new CarrinhoDeCompra();
+					ClientesCadastrado cc = cadastradoRepository
+							.getOne(Long.parseLong(loginJson.get("id_cliente_logado")) + (long) 1);
+					carrinho.setClientesCadastrado(cc);
+					carrinhoDeComprasRepository.save(carrinho);
+
+					return (loginJson.get("nome_de_usuario") + ", seja bem vindo a loja online de eletrônicos!");
+					
+				}
+			} else {
+				statusClienteLogado = false;
+				ClientesLogado clienteLogado = clienteLogadoRepository
+						.getOne(Long.parseLong(loginJson.get("id_cliente_logado")));
+				clienteLogado.setStatusClienteLogado(false);
 				clienteLogadoRepository.save(clienteLogado);
-				
+
 				CarrinhoDeComprasController comprasController = new CarrinhoDeComprasController();
-				comprasController.setClienteLogado(true);
-				
-				carrinho = new CarrinhoDeCompra();
-				ClientesCadastrado cc = cadastradoRepository.getOne(
-					Long.parseLong( loginJson.get("id_cliente_logado"))+ (long)1
-				);
-				carrinho.setClientesCadastrado(cc);
-				carrinhoDeComprasRepository.save(carrinho);
-				
-				return (loginJson.get("nome_de_usuario")+", seja bem vindo a loja online de eletrônicos!");
+				comprasController.setClienteLogado(false);
+
+				return "Deslogado!";
 			}
 			
 		}

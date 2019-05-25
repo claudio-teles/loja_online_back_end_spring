@@ -33,11 +33,12 @@ public class CarrinhoDeComprasController {
 
 	@Autowired
 	private ProdutoRepository repositorioDeProdutosDoEstoque;
+	
 
 	private CarrinhoDeCompra carrinhoDeCompra = new CarrinhoDeCompra();
 
 	private List<Produto> listaDeProdutos = new ArrayList<>();
-
+	
 	private boolean clienteLogado = true;
 
 	public CarrinhoDeComprasController() {
@@ -71,6 +72,7 @@ public class CarrinhoDeComprasController {
 	@ResponseStatus(HttpStatus.OK)
 	public List<Produto> listarTodosOsProdutosDoCarrinho(@PathVariable Long id_carrinho_de_compras) {
 		if (isClienteLogado()) {
+
 			 CarrinhoDeCompra carrinhoDoClienteLogado = repositorioCarrinhosDeCompras
 					 .findById(id_carrinho_de_compras).get();
 			return carrinhoDoClienteLogado.getListaDeProdutosDoCarrinho();
@@ -78,12 +80,20 @@ public class CarrinhoDeComprasController {
 		return null;
 	}
 
-	@PostMapping("/{id_carrinho}/{id_produto}")
+	@PostMapping("/{id_cliente}/{id_produto}")
 	@ResponseStatus(HttpStatus.CREATED)
-	public List<Produto> adicionarProdutoAoCarrinhoDeCompras(@PathVariable Long id_carrinho, @PathVariable Long id_produto) {
+	public List<Produto> adicionarProdutoAoCarrinhoDeCompras(@PathVariable Long id_cliente, @PathVariable Long id_produto) {
 		if (isClienteLogado()) {
+			
+			Long idCarrinho = id_cliente + 1;
+			
+			setCarrinhoDeCompra(repositorioCarrinhosDeCompras.getOne(idCarrinho));
+			setListaDeProdutos(repositorioCarrinhosDeCompras.getOne(idCarrinho).getListaDeProdutosDoCarrinho());
+			
+//			==========================================================================
+			
 			 CarrinhoDeCompra carrinhoDoClienteLogado = repositorioCarrinhosDeCompras
-					 .getOne(id_carrinho);
+					 .getOne(idCarrinho);
 			 setListaDeProdutos( carrinhoDoClienteLogado.getListaDeProdutosDoCarrinho() );
 			 getListaDeProdutos().add( repositorioDeProdutosDoEstoque.getOne(id_produto) );
 			 
@@ -94,12 +104,20 @@ public class CarrinhoDeComprasController {
 		return null;
 	}
 
-	@DeleteMapping("/{id_carrinho}/{id_produto}")
+	@DeleteMapping("/{id_cliente}/{id_produto}")
 	@ResponseStatus(HttpStatus.OK)
-	public List<Produto> removerProdutosDoCarrinhoDeCompra(@PathVariable Long id_carrinho, @PathVariable Long id_produto) {
+	public List<Produto> removerProdutosDoCarrinhoDeCompra(@PathVariable Long id_cliente, @PathVariable Long id_produto) {
 		if (isClienteLogado()) {
+			
+			Long idCarrinho = id_cliente + 1;
+			
+			setCarrinhoDeCompra(repositorioCarrinhosDeCompras.getOne(idCarrinho));
+			setListaDeProdutos(repositorioCarrinhosDeCompras.getOne(idCarrinho).getListaDeProdutosDoCarrinho());
+			
+//			==========================================================================
+			
 			 CarrinhoDeCompra carrinhoDoClienteLogado = repositorioCarrinhosDeCompras
-					 .getOne(id_carrinho);
+					 .getOne(idCarrinho);
 			 setListaDeProdutos( carrinhoDoClienteLogado.getListaDeProdutosDoCarrinho() );
 			 getListaDeProdutos().remove( repositorioDeProdutosDoEstoque.getOne(id_produto) );
 			 

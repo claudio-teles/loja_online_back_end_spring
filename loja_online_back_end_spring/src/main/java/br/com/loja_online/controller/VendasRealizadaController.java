@@ -56,6 +56,8 @@ public class VendasRealizadaController {
 	@ResponseStatus(HttpStatus.CREATED)
 	public List<Produto> finalizarCompraDeProdutos(@PathVariable Long id_carrinho) {
 		
+		listaDeProdutos.clear();
+		
 		Optional<CarrinhoDeCompra> car = carrinhoDeComprasRepository
 				.findById( id_carrinho );
 		getListaDeProdutos().addAll( car.get().getListaDeProdutosDoCarrinho() );
