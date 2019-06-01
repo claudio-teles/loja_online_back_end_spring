@@ -22,7 +22,7 @@ import br.com.loja_online.repository.LiquidacaoRepository;
  */
 @CrossOrigin
 @RestController
-@RequestMapping("api/liquidacoes")
+@RequestMapping("/liquidacoes")
 public class LiquidacaoController {
 	
 	@Autowired

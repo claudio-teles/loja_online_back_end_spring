@@ -25,7 +25,7 @@ import br.com.loja_online.repository.ProdutoRepository;
  */
 @CrossOrigin
 @RestController
-@RequestMapping("/api/carrinho_de_compras")
+@RequestMapping("/carrinho_de_compras")
 public class CarrinhoDeComprasController {
 
 	@Autowired

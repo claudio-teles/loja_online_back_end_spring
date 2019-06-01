@@ -23,7 +23,7 @@ import br.com.loja_online.repository.ClienteLogadoRepository;
  */
 @CrossOrigin
 @RestController
-@RequestMapping("api/clientes_cadastrados")
+@RequestMapping("/clientes_cadastrados")
 public class ClientesCadastradosController {
 	
 	@Autowired

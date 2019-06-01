@@ -26,7 +26,7 @@ import br.com.loja_online.repository.VendasRealizadaRepository;
  */
 @CrossOrigin
 @RestController
-@RequestMapping("api/vendas_realizadas")
+@RequestMapping("/vendas_realizadas")
 public class VendasRealizadaController {
 	
 	@Autowired

@@ -26,7 +26,7 @@ import br.com.loja_online.repository.VendasRealizadaRepository;
  */
 @CrossOrigin
 @RestController
-@RequestMapping("api/administrador_do_sites")
+@RequestMapping("/administrador_do_sites")
 public class AdministraSiteController {
 	
 	@Autowired

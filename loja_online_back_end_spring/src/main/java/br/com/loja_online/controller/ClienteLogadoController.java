@@ -29,7 +29,7 @@ import br.com.loja_online.repository.ClienteLogadoRepository;
  */
 @CrossOrigin
 @RestController
-@RequestMapping("api/clientes_logados")
+@RequestMapping("/clientes_logados")
 public class ClienteLogadoController {
 	
 	private boolean statusClienteLogado = false;

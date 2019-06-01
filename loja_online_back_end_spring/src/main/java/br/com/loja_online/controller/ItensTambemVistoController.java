@@ -23,7 +23,7 @@ import br.com.loja_online.repository.ItensTambemVistoRepository;
  */
 @CrossOrigin
 @RestController
-@RequestMapping("api/itens_tambem_vistos")
+@RequestMapping("/itens_tambem_vistos")
 public class ItensTambemVistoController {
 	
 	@Autowired

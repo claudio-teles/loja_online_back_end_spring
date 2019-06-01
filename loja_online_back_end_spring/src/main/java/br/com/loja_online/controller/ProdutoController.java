@@ -25,7 +25,7 @@ import br.com.loja_online.repository.ProdutoRepository;
  */
 @CrossOrigin
 @RestController
-@RequestMapping("api/produtos")
+@RequestMapping("/produtos")
 public class ProdutoController {
 	
 	@Autowired

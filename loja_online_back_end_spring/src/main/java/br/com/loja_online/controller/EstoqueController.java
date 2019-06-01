@@ -22,7 +22,7 @@ import br.com.loja_online.repository.EstoqueRepository;
  *
  */
 @CrossOrigin
-@RestController @RequestMapping("api/estoques")
+@RestController @RequestMapping("/estoques")
 public class EstoqueController {
 	
 	@Autowired
