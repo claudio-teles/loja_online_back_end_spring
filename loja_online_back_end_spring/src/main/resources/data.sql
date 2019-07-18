@@ -124,7 +124,7 @@ INSERT INTO esquema_loja_online.imagem_do_produto(
 	VALUES (34, 'https://images-submarino.b2w.io/produtos/01/00/oferta/31524/3/31524311_1GG.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
-	VALUES (35, 'https://www.extra-imagens.com.br/TelefoneseCelulares/Smartwatches/13003968/1057583855/relogio-smartwatch-dz09-e-fone-bluetooth-original-touch-bl-13003968.jpg');
+	VALUES (35, 'https://images-americanas.b2w.io/produtos/01/00/oferta/24090/8/24090803_5GG.jpg');
 INSERT INTO esquema_loja_online.imagem_do_produto(
 	id_imagem, local_da_imagem)
 	VALUES (36, 'https://images-americanas.b2w.io/produtos/01/00/item/132691/1/132691106_1GG.jpg');

@@ -68,7 +68,7 @@ public class ClientesCadastradosController {
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
 	public ClientesCadastrado cadastrarUmCliente(@RequestBody Map<String, String> cadastroJson) {
-		
+
 		ClientesCadastrado clienteCadastrado = new ClientesCadastrado();
 		clienteCadastrado.setPrimeiroNome( cadastroJson.get( "primeiro_nome" ) );
 		clienteCadastrado.setSobreNome( cadastroJson.get( "sobre_nome" ) );
